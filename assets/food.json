@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Phở",
+        "ref": "Công cha cơm tấm mỡ hành, Nghĩa mẹ như Phở Hà thành Thăng Long",
+        "img": "images/arrow.png",
+        "price": "1.000.000 VNĐ",
+        "fact": "Top 40 món ăn nhất định phải thử trên thế giới"
+    },
+    {
+        "name": "Bún chả",
+        "ref": "... Có một ông đồ cuồng chữ ở nhà quê, một hôm khăn gói lên Hà Nội đã ứng khẩu đọc hai câu thơ khi ngửi thấy mùi khó chả: \n Ngàn năm bửu vật đất Thăng Long.\n Bún chả là đây có phải không?...",
+        "img": "images/arrow.png",
+        "price": "100.000 VNĐ",
+        "fact": "Trong chuyến thăm Việt Nam năm 2016, tổng thống Mỹ Barack Obama cùng đầu bếp nổi tiếng Anthony Bourdain đã tới quán bún chả trên phố Lê Văn Hưu để thưởng thức món ăn truyền thống này của Việt Nam"
+    },
+    {
+        "name": "Bánh cuốn",
+        "ref": "Thanh Trì có bánh cuốn ngon \n Có gò ngũ Nhạc, có con sông Hồng",
+        "img": "images/arrow.png",
+        "price": "50.000 VNĐ",
+        "fact": "Bánh cuốn Việt Nam: Nét tinh tế ẩm thực được khen ngợi nức nở trên báo Mỹ The New York Times"
+    }
+]
