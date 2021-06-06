@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'FoodInfo.dart';
+import '../../logic/models/FoodInfo.dart';
 import 'dart:convert';
 
 class FoodScreen extends StatefulWidget {

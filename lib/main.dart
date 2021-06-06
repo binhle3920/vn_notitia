@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'cuisine.dart';
+import 'view/screens/cuisine.dart';
 import 'package:flutter/services.dart';
 
 void main() {
