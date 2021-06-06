@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'view/screens/cuisine.dart';
 import 'package:flutter/services.dart';
+import 'view/utils/navigation_bar.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,6 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      bottomNavigationBar: BottomNavigation(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
