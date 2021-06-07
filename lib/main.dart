@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vn_notitia/view/screens/cuisine.dart';
 import 'package:flutter/services.dart';
 import 'view/utils/navigation_bar.dart';
+import 'view/screens/loading.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'Slabo 13px',
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: LoadingScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
