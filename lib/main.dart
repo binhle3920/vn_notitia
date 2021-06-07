@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'view/screens/cuisine.dart';
+import 'package:vn_notitia/view/screens/cuisine.dart';
 import 'package:flutter/services.dart';
 import 'view/utils/navigation_bar.dart';
 

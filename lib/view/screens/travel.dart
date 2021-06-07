@@ -18,19 +18,35 @@ class _TravelScreen extends State<TravelScreen> {
         child: Column(
           children: [
             Container(
-                height: 76,
+                height: 80,
                 width: 375,
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset("assets/images/doodle.png"),
+                    Container(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Image.asset(
+                        "assets/images/doodle.png",
+                        width: 60,
+                        height: 60,
+                      ),
+                    ),
                     Center(
                         child: Text(
                       "DU LỊCH",
-                      style: TextStyle(fontSize: 40, fontFamily: 'Slabo'),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontFamily: 'Roboto',
+                          color: new Color(0xFF1A535C)),
                     )),
-                    Image.asset("assets/images/plane.png")
+                    Container(
+                        padding: EdgeInsets.only(top: 0),
+                        child: Image.asset(
+                          "assets/images/plane.png",
+                          width: 65,
+                          height: 65,
+                        ))
                   ],
                 )),
             Container(
