@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:vn_notitia/view/screens/city.dart';
 
 class BottomNavigation extends StatelessWidget {
   const BottomNavigation({Key key}) : super(key: key);
@@ -9,7 +10,9 @@ class BottomNavigation extends StatelessWidget {
       icon: Icons.home,
       color: Colors.white,
       backgroundColor: Color.fromRGBO(26, 83, 92, 1),
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ChooseCityScreen()));
+      },
     );
   }
 }

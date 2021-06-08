@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
-import 'package:vn_notitia/view/screens/travel.dart';
+import 'package:vn_notitia/view/screens/city.dart';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key key}) : super(key: key);
@@ -24,7 +24,7 @@ class _LoadingScreenState extends State<LoadingScreen> with TickerProviderStateM
     animationController.forward();
 
     Timer(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => TravelScreen()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChooseCityScreen()));
     });
 
     super.initState();

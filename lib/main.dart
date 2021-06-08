@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vn_notitia/view/screens/cuisine.dart';
 import 'package:flutter/services.dart';
-import 'view/utils/navigation_bar.dart';
 import 'view/screens/loading.dart';
 
 void main() {
@@ -17,98 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: 'Slabo 13px',
+        fontFamily: 'Slabo',
         primarySwatch: Colors.blue,
       ),
       home: LoadingScreen(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  String _text = 'Đây nè';
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  void _changeText() {
-    setState(() {
-      _text = "GÀAA";
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      bottomNavigationBar: BottomNavigation(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('assets/images/arrow.png',
-                width: 300, height: 300, fit: BoxFit.fill),
-            Text('Bấm vô cái bên phải',
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.red,
-                )),
-            Text(''),
-            Text(''),
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: Stack(
-        children: <Widget>[
-          Align(
-            alignment: Alignment(-0.8, -0.5),
-            child: FloatingActionButton(
-              onPressed: _changeText,
-              child: Text('$_text'),
-            ),
-          ),
-          Align(
-            alignment: Alignment(0.8, -0.5),
-            child: FloatingActionButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => FoodScreen()));
-              },
-              child: Text('Đây nè'),
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: FloatingActionButton(
-              onPressed: _incrementCounter,
-              tooltip: 'Increment',
-              child: Icon(Icons.add),
-            ), // This trailing comma makes auto-formatting nicer for build methods.)
-          )
-        ],
-      ),
     );
   }
 }
