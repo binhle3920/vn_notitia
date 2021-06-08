@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vn_notitia/view/screens/mainscreen.dart';
 import 'package:vn_notitia/view/screens/news.dart';
 
 class ChooseCityScreen extends StatefulWidget {
@@ -83,7 +84,7 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> {
       ),
       child: RawMaterialButton(
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => NewsScreen()));
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen()));
         },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
         fillColor: Color.fromRGBO(78, 205, 196, 1),
