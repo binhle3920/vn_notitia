@@ -1,7 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:vn_notitia/view/screens/covid.dart';
+import '../utils/navigation_bar.dart';
 
 class MainScreen extends StatefulWidget {
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -9,19 +13,23 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+      backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(
         title: Text('Main screen'),
       ),
+      bottomNavigationBar: BottomNavigation(),
       body: ListView(
         children: <Widget>[
           Container(
-              padding: EdgeInsets.all(1),
-              child:  Image(image: AssetImage('assets/images/DN.jpg'))
+            padding: EdgeInsets.all(5),
+            child:  ClipRRect(borderRadius: new BorderRadius.circular(25.0),child: Image.asset('assets/images/DN.jpg'),),
+
           ),
+          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
+
           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
                 padding: EdgeInsets.all(25) ,
@@ -29,17 +37,22 @@ class _MainScreenState extends State<MainScreen> {
                 icon: Image.asset('assets/images/covid.png'),
                 iconSize: 70,
               ),
-
+              Spacer(),
+              Container(height: 80, child: VerticalDivider(color: Color(0xff4ECDC4)), padding: EdgeInsets.only(top: 30),),
+              Spacer(),
 
               IconButton(
-                padding: EdgeInsets.all(25) ,
+                padding: EdgeInsets.all(10) ,
                 onPressed: () {},
                 icon: Image.asset('assets/images/news.png'),
                 iconSize: 70,
               ),
+              Spacer(),
+              Container(height: 80, child: VerticalDivider(color: Color(0xff4ECDC4)), padding: EdgeInsets.only(top: 30),),
+              Spacer(),
 
               IconButton(
-                padding: EdgeInsets.all(25) ,
+                padding: EdgeInsets.all(10) ,
                 onPressed: () {},
                 icon: Image.asset("assets/images/history.png"),
                 iconSize: 70,
@@ -47,9 +60,11 @@ class _MainScreenState extends State<MainScreen> {
             ],
           ),
 
+          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
 
           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget> [
               IconButton(
                   padding: EdgeInsets.all(25) ,
@@ -57,16 +72,25 @@ class _MainScreenState extends State<MainScreen> {
                   icon: Image.asset('assets/images/place.png'),
                   iconSize: 70
               ),
+              Spacer(),
 
+              Container(height: 80, child: VerticalDivider(color: Color(0xff4ECDC4)), padding: EdgeInsets.only(top: 30),),
+
+              Spacer(),
 
               IconButton(
-                padding: EdgeInsets.all(25) ,
+                // padding: EdgeInsets.all(10) ,
                 onPressed: () {},
                 icon: Image.asset('assets/images/food.png'),
                 iconSize: 70,
               ),
+              Spacer(),
+
+              Container(height: 80, child: VerticalDivider(color: Color(0xff4ECDC4)), padding: EdgeInsets.only(top: 30),),
+              Spacer(),
+
               IconButton(
-                padding: EdgeInsets.all(25) ,
+                // padding: EdgeInsets.all(10) ,
                 onPressed: () {},
                 icon: Image.asset("assets/images/game.png"),
                 iconSize: 70,
@@ -74,13 +98,17 @@ class _MainScreenState extends State<MainScreen> {
             ],
           ),
 
+          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
+
 
           Container(
             child: Center(
-              child: Text(" \nRủ nhau mua tép Nam Ô\n Sẵn bờ cát trắng, phơi khô đem về\n\n" ,
+              child: Text(" \nRủ nhau mua tép Nam Ô\n Sẵn bờ cát trắng, phơi khô đem về\n" ,
                 textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0),),
             ),
           ),
+
+          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
           Container(
             child: Image.asset('assets/images/square.png', height: 100, width: 100,alignment: Alignment.center,),
           ),
@@ -90,7 +118,7 @@ class _MainScreenState extends State<MainScreen> {
                 textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0, color: Colors.red),),
             ),
           ),
-
+          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
           Container(
             child: Image.asset('assets/images/population.png', height: 100, width: 100,alignment: Alignment.center,),
           ),
@@ -101,6 +129,7 @@ class _MainScreenState extends State<MainScreen> {
                 textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0, color: Colors.red),),
             ),
           ),
+          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
 
           Container(
             child: Image.asset('assets/images/licenseplate.png', height: 100, width: 100,alignment: Alignment.center,),
@@ -112,8 +141,6 @@ class _MainScreenState extends State<MainScreen> {
                 textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0, color: Colors.red),),
             ),
           )
-
-
         ],
       ),
     );

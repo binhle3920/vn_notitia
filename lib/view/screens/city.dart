@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:vn_notitia/view/screens/covid.dart';
 import 'package:vn_notitia/view/screens/mainscreen.dart';
 import 'package:vn_notitia/view/screens/news.dart';
+import 'package:vn_notitia/view/screens/travel.dart';
 
 class ChooseCityScreen extends StatefulWidget {
   const ChooseCityScreen({Key key}) : super(key: key);
