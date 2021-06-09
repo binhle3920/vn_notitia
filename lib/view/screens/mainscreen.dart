@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:vn_notitia/view/screens/covid.dart';
+import 'package:vn_notitia/view/screens/cuisine.dart';
+import 'package:vn_notitia/view/screens/news.dart';
+import 'package:vn_notitia/view/screens/travel.dart';
 import '../utils/navigation_bar.dart';
 
 class MainScreen extends StatefulWidget {
@@ -33,7 +36,10 @@ class _MainScreenState extends State<MainScreen> {
             children: [
               IconButton(
                 padding: EdgeInsets.all(25) ,
-                onPressed: () {},
+                onPressed: () { Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CovidScreen()),
+                );},
                 icon: Image.asset('assets/images/covid.png'),
                 iconSize: 70,
               ),
@@ -43,7 +49,10 @@ class _MainScreenState extends State<MainScreen> {
 
               IconButton(
                 padding: EdgeInsets.all(10) ,
-                onPressed: () {},
+                onPressed: () { Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NewsScreen()),
+                );},
                 icon: Image.asset('assets/images/news.png'),
                 iconSize: 70,
               ),
@@ -68,7 +77,10 @@ class _MainScreenState extends State<MainScreen> {
             children: <Widget> [
               IconButton(
                   padding: EdgeInsets.all(25) ,
-                  onPressed: () {},
+                  onPressed: () { Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TravelScreen()),
+                  );},
                   icon: Image.asset('assets/images/place.png'),
                   iconSize: 70
               ),
@@ -80,7 +92,10 @@ class _MainScreenState extends State<MainScreen> {
 
               IconButton(
                 // padding: EdgeInsets.all(10) ,
-                onPressed: () {},
+                onPressed: () { Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FoodScreen()),
+                );},
                 icon: Image.asset('assets/images/food.png'),
                 iconSize: 70,
               ),
