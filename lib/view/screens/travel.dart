@@ -50,7 +50,7 @@ class _TravelScreen extends State<TravelScreen> {
                   ],
                 )),
             Container(
-                padding: const EdgeInsets.only(top: 10, bottom: 1),
+                padding: const EdgeInsets.only(top: 1, bottom: 1),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -85,7 +85,7 @@ class _TravelScreen extends State<TravelScreen> {
                             child: Image.asset(
                               "assets/images/Travel_BenNhaRong.jpg",
                               width: 335,
-                              height: 215,
+                              height: 210,
                             )),
                       ),
                       Container(
@@ -109,7 +109,7 @@ class _TravelScreen extends State<TravelScreen> {
                             child: Image.asset(
                               "assets/images/Travel_BenNhaRong.jpg",
                               width: 335,
-                              height: 215,
+                              height: 210,
                             )),
                       ),
                       Container(
@@ -133,7 +133,7 @@ class _TravelScreen extends State<TravelScreen> {
                             child: Image.asset(
                               "assets/images/Travel_BenNhaRong.jpg",
                               width: 335,
-                              height: 215,
+                              height: 210,
                             )),
                       ),
                       Container(
@@ -195,7 +195,7 @@ class _TravelScreen extends State<TravelScreen> {
                             child: Image.asset(
                               "assets/images/Travel_SuoiTien.png",
                               width: 335,
-                              height: 215,
+                              height: 210,
                             )),
                       ),
                       Container(
@@ -219,7 +219,7 @@ class _TravelScreen extends State<TravelScreen> {
                             child: Image.asset(
                               "assets/images/Travel_SuoiTien.png",
                               width: 335,
-                              height: 215,
+                              height: 210,
                             )),
                       ),
                       Container(
@@ -243,7 +243,7 @@ class _TravelScreen extends State<TravelScreen> {
                             child: Image.asset(
                               "assets/images/Travel_SuoiTien.png",
                               width: 335,
-                              height: 215,
+                              height: 210,
                             )),
                       ),
                       Container(
