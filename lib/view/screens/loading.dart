@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 
 import 'package:vn_notitia/view/screens/city.dart';
+import 'package:vn_notitia/view/screens/covid.dart';
+import 'package:vn_notitia/view/screens/mainscreen.dart';
 
 
 

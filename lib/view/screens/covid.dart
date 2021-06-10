@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../utils/navigation_bar.dart';
 class CovidScreen extends StatefulWidget {
 
@@ -12,6 +13,7 @@ class _CovidScreenState extends State<CovidScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(title: Text("Covid")),
       bottomNavigationBar: BottomNavigation(),
       body:ListView(
@@ -76,55 +78,24 @@ class _CovidScreenState extends State<CovidScreen> {
                     Flexible(
                       flex: 0,
                       child: Container(
-                          padding: EdgeInsets.only(left : 30, top: 60),
+                          padding: EdgeInsets.only(left : 30, top: 90),
                           child: Text(
                             'Ca nhiễm mới  ',
                             style: TextStyle(color: Color(0xff1A535C),
-                                fontSize: 22.0),
+                                fontSize: 18.0),
                           )
                       ),
                     ),
                     Spacer(),
                     Flexible(
-                        flex: 4,
+                        flex: 6,
                         child: Container(
                           // alignment: Alignment.topRight,
-                            padding: EdgeInsets.only(top: 60),
+                            padding: EdgeInsets.only(top: 90),
                             child: Text(
                               'Ca tử vong mới',
                               style: TextStyle(color: Color(0xff1A535C),
-                                  fontSize: 22.0),
-                            )
-                        )
-                    ),
-
-                  ],
-                ),
-
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Flexible(
-                      flex: 1,
-                      child: Container(
-                        // alignment: Alignment.topLeft,
-                          padding: EdgeInsets.only(left: 70, top: 100),
-                          child: Text(
-                            '12',
-                            style: TextStyle(color: Color(0xffFF6B6B),
-                                fontSize: 30.0),
-                          )
-                      ),
-                    ),
-                    Spacer(flex: 2,),
-                    Flexible(
-                        flex: 4,
-                        child: Container(
-                            padding: EdgeInsets.only(top: 100),
-                            child: Text(
-                              '1',
-                              style: TextStyle(color: Color(0xffFF6B6B),
-                                  fontSize: 30.0),
+                                  fontSize: 18.0),
                             )
                         )
                     ),
@@ -138,24 +109,24 @@ class _CovidScreenState extends State<CovidScreen> {
                     Flexible(
                       flex: 0,
                       child: Container(
-                          padding: EdgeInsets.only(left : 30, top: 160),
+                        // alignment: Alignment.topLeft,
+                          padding: EdgeInsets.only(left: 70, top: 130),
                           child: Text(
-                            'Tổng ca nhiễm',
-                            style: TextStyle(color: Color(0xff1A535C),
-                                fontSize: 22.0),
+                            '12',
+                            style: TextStyle(color: Color(0xffFF6B6B),
+                                fontSize: 36.0),
                           )
                       ),
                     ),
-                    Spacer(),
+                    Spacer(flex: 2,),
                     Flexible(
-                        flex: 4,
+                        flex: 2,
                         child: Container(
-                          // alignment: Alignment.topRight,
-                            padding: EdgeInsets.only(top: 160),
+                            padding: EdgeInsets.only(top: 130),
                             child: Text(
-                              'Tổng ca tử vong',
-                              style: TextStyle(color: Color(0xff1A535C),
-                                  fontSize: 22.0),
+                              '1',
+                              style: TextStyle(color: Color(0xffFF6B6B),
+                                  fontSize: 36.0),
                             )
                         )
                     ),
@@ -167,26 +138,57 @@ class _CovidScreenState extends State<CovidScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Flexible(
-                      flex: 1,
+                      flex: 0,
+                      child: Container(
+                          padding: EdgeInsets.only(left : 30, top: 190),
+                          child: Text(
+                            'Tổng ca nhiễm',
+                            style: TextStyle(color: Color(0xff1A535C),
+                                fontSize: 18.0),
+                          )
+                      ),
+                    ),
+                    Spacer(),
+                    Flexible(
+                        flex: 6,
+                        child: Container(
+                          // alignment: Alignment.topRight,
+                            padding: EdgeInsets.only(top: 190),
+                            child: Text(
+                              'Tổng ca tử vong',
+                              style: TextStyle(color: Color(0xff1A535C),
+                                  fontSize: 18.0),
+                            )
+                        )
+                    ),
+
+                  ],
+                ),
+
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      flex: 0,
                       child: Container(
                         // alignment: Alignment.topLeft,
-                          padding: EdgeInsets.only(left: 70, top: 200),
+                          padding: EdgeInsets.only(left: 70, top: 230),
                           child: Text(
                             '14',
                             style: TextStyle(color: Color(0xffFF6B6B),
-                                fontSize: 30.0),
+                                fontSize: 36.0),
                           )
                       ),
                     ),
                     Spacer(flex: 2,),
                     Flexible(
-                        flex: 4,
+                        flex: 2,
                         child: Container(
-                            padding: EdgeInsets.only(top: 200),
+                            padding: EdgeInsets.only(top: 230),
                             child: Text(
                               '2',
                               style: TextStyle(color: Color(0xffFF6B6B),
-                                  fontSize: 30.0),
+                                  fontSize: 36.0),
                             )
                         )
                     ),
@@ -226,8 +228,19 @@ class _CovidScreenState extends State<CovidScreen> {
                       ),
                       Flexible(
                           flex: 0,
-                          child: IconButton(onPressed: (){}, icon: Image.asset('assets/images/khaibao.png'),
-                            iconSize: 50,)),
+                          child: IconButton(onPressed: () async {
+                            const url = 'https://tokhaiyte.vn/';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          }
+                          , icon: Image.asset('assets/images/khaibao.png'),
+                            iconSize: 50, splashRadius: 30,
+                              splashColor: Color(0xff4ECDC4),
+                              highlightColor: Colors.white) ,
+                      ),
 
                     ],
                   ),
@@ -239,3 +252,5 @@ class _CovidScreenState extends State<CovidScreen> {
     );
   }
 }
+
+
