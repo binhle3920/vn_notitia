@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vn_notitia/view/screens/covid.dart';
 import 'package:vn_notitia/view/screens/mainscreen.dart';
-import 'package:vn_notitia/view/screens/news.dart';
-import 'package:vn_notitia/view/screens/travel.dart';
 
 class ChooseCityScreen extends StatefulWidget {
   const ChooseCityScreen({Key key}) : super(key: key);
@@ -33,11 +30,8 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> {
             _dropdownButton(),
             Padding(
               padding: EdgeInsets.only(top: 40, bottom: 40),
-              child: Image.asset(
-                'assets/images/map.png',
-                width: 221,
-                height: 465
-              ),
+              child:
+                  Image.asset('assets/images/map.png', width: 221, height: 465),
             ),
             _nextButton()
           ],
@@ -54,10 +48,9 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> {
           iconSize: 50,
           iconEnabledColor: Color.fromRGBO(78, 205, 196, 1),
           isExpanded: false,
-          hint: Text(
-              _dropDownValue,
-              style: TextStyle(fontSize: 50, color: Color.fromRGBO(78, 205, 196, 1))
-          ),
+          hint: Text(_dropDownValue,
+              style: TextStyle(
+                  fontSize: 50, color: Color.fromRGBO(78, 205, 196, 1))),
           items: _dropDownList.map((val) {
             return DropdownMenuItem(child: Text(val), value: val);
           }).toList(),
@@ -75,18 +68,14 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> {
     return Container(
       height: 59,
       width: 187.5,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0.0, 5.0),
-            blurRadius: 30.0
-          )
-        ]
-      ),
+      decoration: BoxDecoration(boxShadow: [
+        BoxShadow(
+            color: Colors.grey, offset: Offset(0.0, 5.0), blurRadius: 30.0)
+      ]),
       child: RawMaterialButton(
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen()));
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => MainScreen()));
         },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
         fillColor: Color.fromRGBO(78, 205, 196, 1),
@@ -95,9 +84,7 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> {
           child: Text(
             "NEXT",
             style: TextStyle(
-                color: Color.fromRGBO(247, 255, 247, 1),
-                fontSize: 25
-            ),
+                color: Color.fromRGBO(247, 255, 247, 1), fontSize: 25),
           ),
         ),
       ),

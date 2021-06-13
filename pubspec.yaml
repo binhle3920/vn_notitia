@@ -24,6 +24,7 @@ dependencies:
   flutter_swiper: ^1.1.6
   convex_bottom_bar: ^3.0.0
   google_fonts: ^2.1.0
+  youtube_player_flutter: ^8.0.0 
   # auto_size_text: ^2.1.0
   # animated_text_kit: ^4.2.1
   flutter:
@@ -55,7 +56,7 @@ flutter:
         - asset: assets/fonts/Slabo13px-Regular.ttf
 
   assets:
-    - food.json
+    - assets/data/
     - assets/images/
   # To add assets to your application, add an assets section, like this:
   # assets:

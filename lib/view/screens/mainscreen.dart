@@ -5,10 +5,10 @@ import 'package:vn_notitia/view/screens/covid.dart';
 import 'package:vn_notitia/view/screens/cuisine.dart';
 import 'package:vn_notitia/view/screens/news.dart';
 import 'package:vn_notitia/view/screens/travel.dart';
+import 'package:vn_notitia/view/screens/history.dart';
 import '../utils/navigation_bar.dart';
 
 class MainScreen extends StatefulWidget {
-
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -26,84 +26,114 @@ class _MainScreenState extends State<MainScreen> {
         children: <Widget>[
           Container(
             padding: EdgeInsets.all(5),
-            child:  ClipRRect(borderRadius: new BorderRadius.circular(25.0),child: Image.asset('assets/images/DN.jpg'),),
-
+            child: ClipRRect(
+              borderRadius: new BorderRadius.circular(25.0),
+              child: Image.asset('assets/images/DN.jpg'),
+            ),
           ),
-          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
-
+          Divider(
+            thickness: 1,
+            color: Color(0xff4ECDC4),
+            indent: 75.0,
+            endIndent: 75.0,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
-                padding: EdgeInsets.all(25) ,
-                onPressed: () { Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CovidScreen()),
-                );},
+                padding: EdgeInsets.all(25),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CovidScreen()),
+                  );
+                },
                 icon: Image.asset('assets/images/covid.png'),
                 iconSize: 70,
               ),
               Spacer(),
-              Container(height: 80, child: VerticalDivider(color: Color(0xff4ECDC4)), padding: EdgeInsets.only(top: 30),),
+              Container(
+                height: 80,
+                child: VerticalDivider(color: Color(0xff4ECDC4)),
+                padding: EdgeInsets.only(top: 30),
+              ),
               Spacer(),
-
               IconButton(
-                padding: EdgeInsets.all(10) ,
-                onPressed: () { Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => NewsScreen()),
-                );},
+                padding: EdgeInsets.all(10),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewsScreen()),
+                  );
+                },
                 icon: Image.asset('assets/images/news.png'),
                 iconSize: 70,
               ),
               Spacer(),
-              Container(height: 80, child: VerticalDivider(color: Color(0xff4ECDC4)), padding: EdgeInsets.only(top: 30),),
+              Container(
+                height: 80,
+                child: VerticalDivider(color: Color(0xff4ECDC4)),
+                padding: EdgeInsets.only(top: 30),
+              ),
               Spacer(),
-
               IconButton(
-                padding: EdgeInsets.all(10) ,
-                onPressed: () {},
+                padding: EdgeInsets.all(10),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HistoryScreen()),
+                  );
+                },
                 icon: Image.asset("assets/images/history.png"),
                 iconSize: 70,
               ),
             ],
           ),
-
-          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
-
+          Divider(
+            thickness: 1,
+            color: Color(0xff4ECDC4),
+            indent: 75.0,
+            endIndent: 75.0,
+          ),
           Row(
             // crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget> [
+            children: <Widget>[
               IconButton(
-                  padding: EdgeInsets.all(25) ,
-                  onPressed: () { Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => TravelScreen()),
-                  );},
+                  padding: EdgeInsets.all(25),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TravelScreen()),
+                    );
+                  },
                   icon: Image.asset('assets/images/place.png'),
-                  iconSize: 70
+                  iconSize: 70),
+              Spacer(),
+              Container(
+                height: 80,
+                child: VerticalDivider(color: Color(0xff4ECDC4)),
+                padding: EdgeInsets.only(top: 30),
               ),
               Spacer(),
-
-              Container(height: 80, child: VerticalDivider(color: Color(0xff4ECDC4)), padding: EdgeInsets.only(top: 30),),
-
-              Spacer(),
-
               IconButton(
                 // padding: EdgeInsets.all(10) ,
-                onPressed: () { Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FoodScreen()),
-                );},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FoodScreen()),
+                  );
+                },
                 icon: Image.asset('assets/images/food.png'),
                 iconSize: 70,
               ),
               Spacer(),
-
-              Container(height: 80, child: VerticalDivider(color: Color(0xff4ECDC4)), padding: EdgeInsets.only(top: 30),),
+              Container(
+                height: 80,
+                child: VerticalDivider(color: Color(0xff4ECDC4)),
+                padding: EdgeInsets.only(top: 30),
+              ),
               Spacer(),
-
               IconButton(
                 // padding: EdgeInsets.all(10) ,
                 onPressed: () {},
@@ -112,48 +142,88 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ],
           ),
-
-          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
-
-
+          Divider(
+            thickness: 1,
+            color: Color(0xff4ECDC4),
+            indent: 75.0,
+            endIndent: 75.0,
+          ),
           Container(
             child: Center(
-              child: Text(" \nRủ nhau mua tép Nam Ô\n Sẵn bờ cát trắng, phơi khô đem về\n" ,
-                textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0),),
+              child: Text(
+                " \nRủ nhau mua tép Nam Ô\n Sẵn bờ cát trắng, phơi khô đem về\n",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18.0),
+              ),
             ),
           ),
-
-          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
-          Container(
-            child: Image.asset('assets/images/square.png', height: 100, width: 100,alignment: Alignment.center,),
+          Divider(
+            thickness: 1,
+            color: Color(0xff4ECDC4),
+            indent: 75.0,
+            endIndent: 75.0,
           ),
           Container(
-            child: Center(
-              child: Text(" \n496.3 km2\n" ,
-                textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0, color: Colors.red),),
+            child: Image.asset(
+              'assets/images/square.png',
+              height: 100,
+              width: 100,
+              alignment: Alignment.center,
             ),
           ),
-          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
-          Container(
-            child: Image.asset('assets/images/population.png', height: 100, width: 100,alignment: Alignment.center,),
-          ),
-
           Container(
             child: Center(
-              child: Text(" \n1.137.310 người\n" ,
-                textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0, color: Colors.red),),
+              child: Text(
+                " \n496.3 km2\n",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18.0, color: Colors.red),
+              ),
             ),
           ),
-          Divider(thickness: 1, color: Color(0xff4ECDC4),indent: 75.0, endIndent: 75.0,),
-
-          Container(
-            child: Image.asset('assets/images/licenseplate.png', height: 100, width: 100,alignment: Alignment.center,),
+          Divider(
+            thickness: 1,
+            color: Color(0xff4ECDC4),
+            indent: 75.0,
+            endIndent: 75.0,
           ),
-
+          Container(
+            child: Image.asset(
+              'assets/images/population.png',
+              height: 100,
+              width: 100,
+              alignment: Alignment.center,
+            ),
+          ),
           Container(
             child: Center(
-              child: Text(" \n43\n" ,
-                textAlign: TextAlign.center,style: TextStyle(fontSize: 18.0, color: Colors.red),),
+              child: Text(
+                " \n1.137.310 người\n",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18.0, color: Colors.red),
+              ),
+            ),
+          ),
+          Divider(
+            thickness: 1,
+            color: Color(0xff4ECDC4),
+            indent: 75.0,
+            endIndent: 75.0,
+          ),
+          Container(
+            child: Image.asset(
+              'assets/images/licenseplate.png',
+              height: 100,
+              width: 100,
+              alignment: Alignment.center,
+            ),
+          ),
+          Container(
+            child: Center(
+              child: Text(
+                " \n43\n",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 18.0, color: Colors.red),
+              ),
             ),
           )
         ],

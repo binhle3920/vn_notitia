@@ -5,10 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 
 import 'package:vn_notitia/view/screens/city.dart';
-import 'package:vn_notitia/view/screens/covid.dart';
-import 'package:vn_notitia/view/screens/mainscreen.dart';
-
-
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key key}) : super(key: key);
@@ -17,7 +13,8 @@ class LoadingScreen extends StatefulWidget {
   _LoadingScreenState createState() => _LoadingScreenState();
 }
 
-class _LoadingScreenState extends State<LoadingScreen> with TickerProviderStateMixin {
+class _LoadingScreenState extends State<LoadingScreen>
+    with TickerProviderStateMixin {
   AnimationController animationController;
 
   @override
@@ -29,10 +26,8 @@ class _LoadingScreenState extends State<LoadingScreen> with TickerProviderStateM
     animationController.forward();
 
     Timer(Duration(seconds: 3), () {
-
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChooseCityScreen()));
-
-
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => ChooseCityScreen()));
     });
 
     super.initState();
@@ -59,11 +54,8 @@ class _LoadingScreenState extends State<LoadingScreen> with TickerProviderStateM
             ),
             RotationTransition(
               turns: Tween(begin: 0.0, end: 1.0).animate(animationController),
-              child: Image.asset(
-                'assets/images/load_rotate.png',
-                width: 80,
-                height: 80
-              ),
+              child: Image.asset('assets/images/load_rotate.png',
+                  width: 80, height: 80),
             ),
           ],
         ),
