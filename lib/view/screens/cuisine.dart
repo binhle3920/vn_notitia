@@ -16,7 +16,8 @@ class _FoodScreen extends State<FoodScreen> {
   List _temp = [];
   List<FoodInfo> _foods = [];
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/food.json');
+    final String response =
+        await rootBundle.loadString('assets/data/food.json');
     final data = await json.decode(response);
     setState(() {
       _temp = data["foods"];
@@ -96,9 +97,10 @@ class _FoodScreen extends State<FoodScreen> {
                       height: MediaQuery.of(context).size.width * 2,
                       width: MediaQuery.of(context).size.width * 2,
                       decoration: new BoxDecoration(
-                          color: Color(0xffFAE6B1),
-                          borderRadius: BorderRadius.circular(
-                              MediaQuery.of(context).size.width * 2)),
+                        color: Color(0xffFAE6B1),
+                        borderRadius: BorderRadius.circular(
+                            MediaQuery.of(context).size.width * 2),
+                      ),
                     ),
                   ),
                 ),
@@ -144,7 +146,7 @@ class _FoodScreen extends State<FoodScreen> {
                             ),
                           ),
                           Image.asset(
-                            'assets/' + _foods[index].foodImg,
+                            'assets/images/' + _foods[index].foodImg,
                             fit: BoxFit.fill,
                           ),
                           Text(
