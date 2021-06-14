@@ -29,10 +29,10 @@ class _MainScreenState extends State<MainScreen> {
         children: <Widget>[
           Container(
             padding: EdgeInsets.all(5),
-            child: ClipRRect(
-              borderRadius: new BorderRadius.circular(25.0),
-              child: Image.asset('assets/images/DN.jpg'),
-            ),
+            child:  ClipRRect(borderRadius: new BorderRadius.circular(25.0),child: Image.network('https://i.imgur.com/0ofPEaQ.jpg',
+              fit: BoxFit.cover,),),
+
+
           ),
           Divider(
             thickness: 1,

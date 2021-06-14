@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "954954215087",
+    "project_id": "vn-notitia-137fa",
+    "storage_bucket": "vn-notitia-137fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954954215087:android:8bc22d367b2d1700d0ae5a",
+        "android_client_info": {
+          "package_name": "com.company.notitia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954954215087-rnsr795ks464ap3sp15f2j39brqpeuld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxlX2Ani-VW8aPjjHeeU9d7BOgK4JqPk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954954215087-rnsr795ks464ap3sp15f2j39brqpeuld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

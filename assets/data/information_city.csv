@@ -1,64 +1,63 @@
-﻿Province,Area ,Population
-Bắc Giang,3895.59,1803950
-Bắc Kạn,4859.96,313905
-Cao Bằng,6700.26,530341
-Hà Giang,7929.48,854679
-Lạng Sơn,8310.09,781655
-Việt Trì,3534.56,1463726
-Hạ Long,6178.21,1320324
-Thái Nguyên,3526.64,1286751
-Tuyên Quang,5867.9,784811
-Lào Cai,6364.03,73042
-Yên Bái,6887.46,82103
-Điện Biên Phủ,9541.25,598856
-Hòa Bình,4590.57,854131
-Lai Châu,9068.79,460196
-Sơn La,14123.49,1248415
-Bắc Ninh,822.71,1368840
-Phủ Lý,861.93,8528
-Hải Dương,1668.24,1892254
-Hưng Yên,930.22,1252731
-Nam Định,1668.57,1780393
-Ninh Bình,1386.79,982487
-Thái Bình,1586.35,1860447
-Vĩnh Yên,1235.87,1151154
-Hoàn Kiếm District,3358.6,8053663
-Hồng Bàng District,1561.76,2028514
-Hà Tĩnh,5990.67,1288866
-Vinh,16481.41,3327791
-Đồng Hới,8065.3,89543
-Đông Hà,4621.72,632375
-Thanh Hóa,11114.65,3640128
-Huế,4902.44,1128620
-Buôn Ma Thuột,13030.5,1869322
-Gia Nghĩa,6509.27,622168
-Pleiku,15510.99,1513847
-Kon Tum,9674.18,540438
-Đà Lạt,9783.34,1296906
-Qui Nhơn,6066.21,1486918
-Phan Thiết,7943.93,1230808
-Nha Trang,5137.79,1231107
-Phan Rang–Tháp Chàm,3355.34,590467
-Tuy Hòa,5023.42,872964
-Tam Kỳ,10574.74,1495812
-Quảng Ngãi,5155.78,1231697
-Hải Châu District,1284.88,1134310
-Bà Rịa,1980.98,1148313
-Thủ Dầu Một,2694.64,2426561
-Đồng Xoài,6876.76,994679
-Biên Hòa,5863.6,3097107
-Tây Ninh,4041.25,1169165
-Quận 1,2061.41,8993082
-Long Xuyên,3536.68,1908352
-Bạc Liêu,2669.01,907236
-Bến Tre,2394.81,1288463
-Cà Mau,5221.19,1194476
-Cao Lãnh,3383.85,1599504
-Vị Thanh,1621.7,733017
-Rạch Giá,6348.78,1723067
-Tân An,4494.94,1688547
-Sóc Trăng,3311.88,1199653
-Mỹ Tho,2510.61,1764185
-Trà Vinh,2358.26,1009168
-Vĩnh Long,1525.73,1022791
-Ninh Kiều ,1438.96,1235171
+﻿PROVINCE,POPULATION,AREA,LP,CDTN,IMG
+Bắc Kạn,327.9,4.86,97,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bắc Ninh,1.247.500,"822,8",98,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Hà Nam,852.8,"860,5",90,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Hải Dương,1.892.254,1.656,34,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Hải Phòng,2.028.514,"1.561,70","15,16","\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Hưng Yên,1.252.731,926,89,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Nam Định,1.780.393,"1.652,60",18,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Ninh Bình,982.487,1.378.1,35,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Thái Bình,1.860.447,"1.570,50",17,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+An Giang,1.908.352,"3.536,70",67,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bà Rịa – Vũng Tàu,1.148.313,"1.980,80",72,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bắc Giang,1.803.950,"3.849,70",98,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bạc Liêu,907.236,2.669,94,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bến Tre,1.288.463,"2.394,60",71,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bình Định,1.486.918,"6.066,20",77,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bình Dương,2.455.865,"2.694,70",61,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bình Phước,994.679,"6.877,00",93,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Bình Thuận,1.230.808,"7.812,80",86,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Cà Mau,1.194.476,"5.294,87",69,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Cần Thơ,1.235.171,"1.439,20",65,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Cao Bằng,530.341,"6.700,20",11,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Đà Nẵng,1.134.310,"1.284,90",43,\nQuê em có núi Ngũ Hành\n Có nghề khắc đá lừng danh khắp vùng.\n,https://i.imgur.com/0ofPEaQ.jpg
+Đắk Lắk,1.869.322,"13.030,50",47,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Đăk Nông,622.168,"6.509,30",48,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Điện Biên,598.856,9.541,27,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Đồng Nai,3.097.107,"5.905,70","39,60","\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Đồng tháp,1.599.504,"3.383,80",66,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Gia Lai,1.513.847,"15.510,80",81,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Hà Giang,854.679,"7.929,20",23,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Hà Nội,8.050.000,"3.358,90","29 -33, 40","\nSông Tô nước chảy quanh co \nCầu Đông sương sớm, quán Giò trăng khuya...\n",https://image.shutterstock.com/image-vector/hanoi-vietnam-city-skyline-gray-260nw-1006033447.jpg
+Hà Tĩnh,1.288.866,"5.997,30",38,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Hòa Bình,"846,1","4.608,70",28,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Khánh Hòa,1.231.107,"5.137,80",79,"\nTiếng đồn Bình Định tốt nhà \nPhú Yên tốt ruộng, Khánh Hòa tốt trâu\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Kiên Giang,1.723.067,"6.348,80",68,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Kon Tum,540.438,"9.674,20",82,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Lai Châu,460.196,"9.069,50",25,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Lâm Đồng,1.296.906,"9.783,20",49,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Lạng Sơn,781.655,"8.310,20",12,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Lào Cai,705.6,6.364,24,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Long an,1.688.547,"4.494,93",62,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Nghệ An,3.327.791,"16.493,70",37,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Ninh Thuận,590.467,"3.358,00",85,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Phú Thọ,1.404.200,"3.533,40",19,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Phú Yên,909.5,"5.023,40",78,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Quảng Bình,895.43,"8.065,30",73,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Quảng Nam,1.495.812,"10.574,70",92,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Quảng Ngãi,1.231.697,"5.135,20",76,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Quảng Ninh,1.320.324,"6.177,70",14,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Quảng Trị,632.375,"4.739,80",74,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Sóc Trăng,1.199.653,"3.311,87",83,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Sơn La,1.242.700,"14.174,40",26,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Tây Ninh,1.169.165,"4.041,40",70,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Thái Nguyên,1.268.300,"3.536,40",20,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Thanh Hóa,3.640.128,"11.130,20",36,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Thừa Thiên Huế,1.128.620,"5.033,20",75,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Tiền Giang,1.764.185,"2.510,50",63,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Hồ Chí Minh,8.993.082,"2.061,04","50 -59, 41",\nĐường Sài Gòn cong cong quẹo quẹo \nGái Sài Gòn khó ghẹo lắm anh ơi \n,https://i.imgur.com/qrDxcPF.jpg
+Trà Vinh,1.009.168,"2.358,20",84,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Tuyên Quang,784.811,"5.867,90",22,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Vĩnh Long,1.022.791,"1.525,60",64,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Vĩnh Phúc,1.154.154,"1.253,30",88,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
+Yên Bái,815.6,"6.887,60",21,"\nBầu ơi thương lấy bí cùng, \nTuy rằng khác giống nhưng chung một giàn.\n",https://img.freepik.com/free-vector/vietnam-top-famous-landmark-silhouette-style-island-travel-tourism_11700-124.jpg?size=626&ext=jpg
