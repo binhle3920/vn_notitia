@@ -9,6 +9,9 @@ import 'package:vn_notitia/view/screens/history.dart';
 import '../utils/navigation_bar.dart';
 
 class MainScreen extends StatefulWidget {
+  final city;
+
+  const MainScreen({Key key, @required this.city}) : super(key:key);
   @override
   _MainScreenState createState() => _MainScreenState();
 }

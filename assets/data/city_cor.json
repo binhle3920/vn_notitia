@@ -1,0 +1,308 @@
+{
+  "cities": [
+    {
+      "name": "Bắc Kạn",
+      "top": 60,
+      "left": 100
+    },
+    {
+      "name": "Bắc Ninh",
+      "top": 92,
+      "left": 110
+    },
+    {
+      "name": "Hà Nam",
+      "top": 108,
+      "left": 105
+    },
+    {
+      "name": "Hải Dương",
+      "top": 100,
+      "left": 117
+    },
+    {
+      "name": "Hải Phòng",
+      "top": 100,
+      "left": 125
+    },
+    {
+      "name": "Hưng Yên",
+      "top": 100,
+      "left": 109
+    },
+    {
+      "name": "Nam Định",
+      "top": 114,
+      "left": 111
+    },
+    {
+      "name": "Ninh Bình",
+      "top": 117,
+      "left": 105
+    },
+    {
+      "name": "Thái Bình",
+      "top": 108,
+      "left": 118
+    },{
+      "name": "An Giang",
+      "top": 397,
+      "left": 84
+    }
+    ,{
+      "name": "Bà Rịa - Vũng Tàu",
+      "top": 395,
+      "left": 145
+    },
+    {
+      "name": "Bắc Giang",
+      "top": 85,
+      "left": 126
+    },
+    {
+      "name": "Bạc Liêu",
+      "top": 433,
+      "left": 93
+    },
+    {
+      "name": "Bến Tre",
+      "top": 407,
+      "left": 118
+    },
+    {
+      "name": "Bình Định",
+      "top": 290,
+      "left": 190
+    },
+    {
+      "name": "Bình Dương",
+      "top": 377,
+      "left": 124
+    },
+    {
+      "name": "Bình Phước",
+      "top": 360,
+      "left": 130
+    },
+    {
+      "name": "Bình Thuận",
+      "top": 380,
+      "left": 160
+    },
+    {
+      "name": "Cà Mau",
+      "top": 440,
+      "left": 80
+    },{
+      "name": "Cần Thơ",
+      "top": 408,
+      "left": 94
+    }
+  ,{
+      "name": "Cao Bằng",
+      "top": 45,
+      "left": 105
+    },
+    {
+      "name": "Đà Nẵng",
+      "top": 236,
+      "left": 165
+    },
+    {
+      "name": "Đắk Lắk",
+      "top": 330,
+      "left": 170
+    },
+    {
+      "name": "Đắk Nông",
+      "top": 350,
+      "left": 155
+    },
+    {
+      "name": "Điện Biên",
+      "top": 80,
+      "left": 28
+    },
+    {
+      "name": "Đồng Nai",
+      "top": 380,
+      "left": 140
+    },
+    {
+      "name": "Đồng Tháp",
+      "top": 395,
+      "left": 98
+    },
+    {
+      "name": "Gia Lai",
+      "top": 300,
+      "left": 170
+    },
+    {
+      "name": "Hà Giang",
+      "top": 45,
+      "left": 80
+    },{
+      "name": "Hà Nội",
+      "top": 95,
+      "left": 100
+    }
+  ,{
+      "name": "Hà Tĩnh",
+      "top": 175,
+      "left": 100
+    },
+    {
+      "name": "Hòa Bình",
+      "top": 105,
+      "left": 90
+    },
+    {
+      "name": "Khánh Hòa",
+      "top": 345,
+      "left": 190
+    },
+    {
+      "name": "Kiên Giang",
+      "top": 413,
+      "left": 88
+    },
+    {
+      "name": "Kontum",
+      "top": 275,
+      "left": 160
+    },
+    {
+      "name": "Lai Châu",
+      "top": 60,
+      "left": 30
+    },
+    {
+      "name": "Lâm Đồng",
+      "top": 360,
+      "left": 170
+    },
+    {
+      "name": "Lạng Sơn",
+      "top": 70,
+      "left": 120
+    },
+    {
+      "name": "Lào Cai",
+      "top": 60,
+      "left": 55
+    },{
+      "name": "Long An",
+      "top": 392,
+      "left": 110
+    }
+  ,{
+      "name": "Nghệ An",
+      "top": 150,
+      "left": 80
+    },
+    {
+      "name": "Ninh Thuận",
+      "top": 365,
+      "left": 187
+    },
+    {
+      "name": "Phú Thọ",
+      "top": 87,
+      "left": 82
+    },
+    {
+      "name": "Phú Yên",
+      "top": 320,
+      "left": 195
+    },
+    {
+      "name": "Quảng Bình",
+      "top": 200,
+      "left": 120
+    },
+    {
+      "name": "Quảng Nam",
+      "top": 250,
+      "left": 160
+    },
+    {
+      "name": "Quảng Ngãi",
+      "top": 265,
+      "left": 180
+    },
+    {
+      "name": "Quảng Ninh",
+      "top": 90,
+      "left": 140
+    },
+    {
+      "name": "Quảng Trị",
+      "top": 215,
+      "left": 135
+    },{
+      "name": "Sóc Trăng",
+      "top": 425,
+      "left": 105
+    }
+  ,{
+      "name": "Sơn La",
+      "top": 90,
+      "left": 50
+    },
+    {
+      "name": "Tây Ninh",
+      "top": 370,
+      "left": 110
+    },
+    {
+      "name": "Thái Nguyên",
+      "top": 78,
+      "left": 100
+    },
+    {
+      "name": "Thanh Hóa",
+      "top": 130,
+      "left": 95
+    },
+    {
+      "name": "Thừa Thiên Huế",
+      "top": 230,
+      "left": 150
+    },
+    {
+      "name": "Tiền Giang",
+      "top": 400,
+      "left": 110
+    },
+    {
+      "name": "Hồ Chí Minh",
+      "top": 389,
+      "left": 125
+    },
+    {
+      "name": "Trà Vinh",
+      "top": 420,
+      "left": 119
+    },
+    {
+      "name": "Tuyên Quang",
+      "top": 70,
+      "left": 85
+    },{
+      "name": "Vĩnh Long",
+      "top": 410,
+      "left": 108
+    },
+    {
+      "name": "Vĩnh Phúc",
+      "top": 85,
+      "left": 95
+    },
+    {
+      "name": "Yên Bái",
+      "top": 78,
+      "left": 80
+    }
+  ]
+}
