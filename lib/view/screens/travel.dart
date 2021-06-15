@@ -16,7 +16,8 @@ class _TravelScreen extends State<TravelScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Travel"),
+        title: Text(widget.city),
+        centerTitle: true,
       ),
       bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: Container(

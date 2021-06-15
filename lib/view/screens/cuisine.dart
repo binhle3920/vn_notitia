@@ -49,17 +49,18 @@ class _FoodScreen extends State<FoodScreen> {
       bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        iconTheme: IconThemeData(color: Colors.black),
-        title: Text(
-          '$_city',
-          style: TextStyle(
-            fontSize: 28,
-            color: Colors.black,
-            decoration: TextDecoration.underline,
-          ),
-        ),
+        title: Text(widget.city),
+        // backgroundColor: Colors.transparent,
+        // elevation: 0,
+        // iconTheme: IconThemeData(color: Colors.black),
+        // title: Text(
+        //   '$_city',
+        //   style: TextStyle(
+        //     fontSize: 28,
+        //     color: Colors.black,
+        //     decoration: TextDecoration.underline,
+        //   ),
+        // ),
       ),
       body: new Container(
           child: SafeArea(

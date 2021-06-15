@@ -15,7 +15,8 @@ class _NewsScreen extends State<NewsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("News"),
+        centerTitle: true,
+        title: Text(widget.city),
       ),
       bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: Container(

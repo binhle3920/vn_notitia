@@ -25,6 +25,7 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(
         title: Text(widget.city),
+        centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           color: Colors.white,
@@ -57,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => CovidScreen()),
+                    MaterialPageRoute(builder: (context) => CovidScreen(city: widget.city, cityIndex: widget.cityIndex)),
                   );
                 },
                 icon: Image.asset('assets/images/covid.png'),
@@ -75,7 +76,7 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => NewsScreen()),
+                    MaterialPageRoute(builder: (context) => NewsScreen(city: widget.city, cityIndex: widget.cityIndex)),
                   );
                 },
                 icon: Image.asset('assets/images/news.png'),
@@ -93,7 +94,7 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HistoryScreen()),
+                    MaterialPageRoute(builder: (context) => HistoryScreen(city: widget.city, cityIndex: widget.cityIndex)),
                   );
                 },
                 icon: Image.asset("assets/images/history.png"),
@@ -116,7 +117,7 @@ class _MainScreenState extends State<MainScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TravelScreen()),
+                      MaterialPageRoute(builder: (context) => TravelScreen(city: widget.city, cityIndex: widget.cityIndex)),
                     );
                   },
                   icon: Image.asset('assets/images/place.png'),
@@ -133,7 +134,7 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => FoodScreen()),
+                    MaterialPageRoute(builder: (context) => FoodScreen(city: widget.city, cityIndex: widget.cityIndex)),
                   );
                 },
                 icon: Image.asset('assets/images/food.png'),

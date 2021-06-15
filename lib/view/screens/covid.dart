@@ -18,7 +18,10 @@ class _CovidScreenState extends State<CovidScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
-      appBar: AppBar(title: Text("Covid")),
+      appBar: AppBar(
+        title: Text(widget.city),
+        centerTitle: true,
+      ),
       bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: ListView(
         children: <Widget>[

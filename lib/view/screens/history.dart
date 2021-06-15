@@ -42,7 +42,8 @@ class _HistoryScreen extends State<HistoryScreen> {
     return new Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text(_city),
+        centerTitle: true,
+        title: Text(widget.city),
       ),
       bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: Column(
