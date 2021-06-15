@@ -71,84 +71,86 @@ class _TravelScreen extends State<TravelScreen> {
                     ),
                   ],
                 )),
-            Container(
-              height: 240.0,
-              child: new ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 30),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Image.asset(
-                              "assets/images/Travel_BenNhaRong.jpg",
-                              width: 335,
-                              height: 210,
-                            )),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 30, bottom: 8),
-                        child: Center(
-                            child: Text(
-                          "BẾN NHÀ RỒNG",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blueGrey),
-                        )),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 30),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Image.asset(
-                              "assets/images/Travel_BenNhaRong.jpg",
-                              width: 335,
-                              height: 210,
-                            )),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 30, bottom: 8),
-                        child: Center(
-                            child: Text(
-                          "NHÀ HÁT LỚN",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blueGrey),
-                        )),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 30),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Image.asset(
-                              "assets/images/Travel_BenNhaRong.jpg",
-                              width: 335,
-                              height: 210,
-                            )),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 30, bottom: 8),
-                        child: Center(
-                            child: Text(
-                          "NHÀ THỜ ĐỨC BÀ",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blueGrey),
-                        )),
-                      ),
-                    ],
-                  )
-                ],
+            Flexible(
+              child: Container(
+                height: 240.0,
+                child: new ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image.asset(
+                                "assets/images/Travel_BenNhaRong.jpg",
+                                width: 335,
+                                height: 210,
+                              )),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(left: 30, bottom: 8),
+                          child: Center(
+                              child: Text(
+                            "BẾN NHÀ RỒNG",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blueGrey),
+                          )),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image.asset(
+                                "assets/images/Travel_BenNhaRong.jpg",
+                                width: 335,
+                                height: 210,
+                              )),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(left: 30, bottom: 8),
+                          child: Center(
+                              child: Text(
+                            "NHÀ HÁT LỚN",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blueGrey),
+                          )),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image.asset(
+                                "assets/images/Travel_BenNhaRong.jpg",
+                                width: 335,
+                                height: 210,
+                              )),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(left: 30, bottom: 8),
+                          child: Center(
+                              child: Text(
+                            "NHÀ THỜ ĐỨC BÀ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blueGrey),
+                          )),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
             const Divider(
@@ -180,85 +182,87 @@ class _TravelScreen extends State<TravelScreen> {
                     ),
                   ],
                 )),
-            Container(
-              padding: EdgeInsets.only(top: 1),
-              height: 240.0,
-              child: new ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 30),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Image.asset(
-                              "assets/images/Travel_SuoiTien.png",
-                              width: 335,
-                              height: 210,
-                            )),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 30, top: 8),
-                        child: Center(
-                            child: Text(
-                          "SUỐI TIÊN",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blueGrey),
-                        )),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 30),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Image.asset(
-                              "assets/images/Travel_SuoiTien.png",
-                              width: 335,
-                              height: 210,
-                            )),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 30, top: 8),
-                        child: Center(
-                            child: Text(
-                          "ĐẦM SEN",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blueGrey),
-                        )),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(left: 30),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Image.asset(
-                              "assets/images/Travel_SuoiTien.png",
-                              width: 335,
-                              height: 210,
-                            )),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 30, top: 8),
-                        child: Center(
-                            child: Text(
-                          "THẢO CẦM VIÊN",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.blueGrey),
-                        )),
-                      ),
-                    ],
-                  )
-                ],
+            Flexible(
+              child: Container(
+                padding: EdgeInsets.only(top: 1),
+                height: 240.0,
+                child: new ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image.asset(
+                                "assets/images/Travel_SuoiTien.png",
+                                width: 335,
+                                height: 210,
+                              )),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(left: 30, top: 8),
+                          child: Center(
+                              child: Text(
+                            "SUỐI TIÊN",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blueGrey),
+                          )),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image.asset(
+                                "assets/images/Travel_SuoiTien.png",
+                                width: 335,
+                                height: 210,
+                              )),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(left: 30, top: 8),
+                          child: Center(
+                              child: Text(
+                            "ĐẦM SEN",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blueGrey),
+                          )),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(left: 30),
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image.asset(
+                                "assets/images/Travel_SuoiTien.png",
+                                width: 335,
+                                height: 210,
+                              )),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(left: 30, top: 8),
+                          child: Center(
+                              child: Text(
+                            "THẢO CẦM VIÊN",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.blueGrey),
+                          )),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ],

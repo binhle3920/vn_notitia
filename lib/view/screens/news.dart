@@ -76,19 +76,19 @@ class _NewsScreen extends State<NewsScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                              width: 240,
-                              padding: EdgeInsets.only(
-                                  left: 10, top: 30, bottom: 20, right: 10),
-                              child: Flexible(
-                                child: Text(
-                                    '6 nhánh lây nhiễm lớn từ Hội thánh Truyền giáo Phục hưng',
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              )),
+                          Flexible(
+                              child: Container(
+                            width: 240,
+                            padding: EdgeInsets.only(
+                                left: 10, top: 30, bottom: 20, right: 10),
+                            child: Text(
+                                '6 nhánh lây nhiễm lớn từ Hội thánh Truyền giáo Phục hưng',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          )),
                           Container(
                             padding: const EdgeInsets.only(left: 10),
                             child: Text(
@@ -114,19 +114,19 @@ class _NewsScreen extends State<NewsScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                              width: 240,
-                              padding: EdgeInsets.only(
-                                  left: 10, top: 30, bottom: 20, right: 10),
-                              child: Flexible(
-                                child: Text(
-                                    '6 nhánh lây nhiễm lớn từ Hội thánh Truyền giáo Phục hưng',
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              )),
+                          Flexible(
+                              child: Container(
+                            width: 240,
+                            padding: EdgeInsets.only(
+                                left: 10, top: 30, bottom: 20, right: 10),
+                            child: Text(
+                                '6 nhánh lây nhiễm lớn từ Hội thánh Truyền giáo Phục hưng',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          )),
                           Container(
                             padding: const EdgeInsets.only(left: 10),
                             child: Text(
@@ -181,23 +181,19 @@ class _NewsScreen extends State<NewsScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            children: [
-                              Container(
-                                  width: 240,
-                                  padding: EdgeInsets.only(
-                                      left: 10, top: 30, bottom: 20, right: 10),
-                                  child: Flexible(
-                                    child: Text(
-                                        'TP.HCM: Nhiều quận xuất hiện ca nghi nhiễm Covid-19 mới; 3 trường hợp F2 thành F0',
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        )),
-                                  )),
-                            ],
-                          ),
+                          Flexible(
+                              child: Container(
+                            width: 240,
+                            padding: EdgeInsets.only(
+                                left: 10, top: 30, bottom: 20, right: 10),
+                            child: Text(
+                                'TP.HCM: Nhiều quận xuất hiện ca nghi nhiễm Covid-19 mới; 3 trường hợp F2 thành F0',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          )),
                           Container(
                             padding: const EdgeInsets.only(left: 10),
                             child: Text(
@@ -223,19 +219,19 @@ class _NewsScreen extends State<NewsScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                              width: 240,
-                              padding: EdgeInsets.only(
-                                  left: 10, top: 30, bottom: 20, right: 10),
-                              child: Flexible(
-                                child: Text(
-                                    'TP.HCM: Nhiều quận xuất hiện ca nghi nhiễm Covid-19 mới; 3 trường hợp F2 thành F0',
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              )),
+                          Flexible(
+                              child: Container(
+                            width: 240,
+                            padding: EdgeInsets.only(
+                                left: 10, top: 30, bottom: 20, right: 10),
+                            child: Text(
+                                'TP.HCM: Nhiều quận xuất hiện ca nghi nhiễm Covid-19 mới; 3 trường hợp F2 thành F0',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          )),
                           Container(
                             padding: const EdgeInsets.only(left: 10),
                             child: Text(
@@ -290,19 +286,19 @@ class _NewsScreen extends State<NewsScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                              width: 240,
-                              padding: EdgeInsets.only(
-                                  left: 10, top: 30, bottom: 20, right: 10),
-                              child: Flexible(
-                                child: Text(
-                                    'Tối 2/6 thêm 138 ca mắc Covid-19, TPHCM liên tiếp ghi nhận trường hợp mới',
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              )),
+                          Flexible(
+                              child: Container(
+                            width: 240,
+                            padding: EdgeInsets.only(
+                                left: 10, top: 30, bottom: 20, right: 10),
+                            child: Text(
+                                'Tối 2/6 thêm 138 ca mắc Covid-19, TPHCM liên tiếp ghi nhận trường hợp mới',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          )),
                           Container(
                             padding: const EdgeInsets.only(left: 10),
                             child: Text(
@@ -328,19 +324,19 @@ class _NewsScreen extends State<NewsScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                              width: 240,
-                              padding: EdgeInsets.only(
-                                  left: 10, top: 30, bottom: 20, right: 10),
-                              child: Flexible(
-                                child: Text(
-                                    'Tối 2/6 thêm 138 ca mắc Covid-19, TPHCM liên tiếp ghi nhận trường hợp mới',
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              )),
+                          Flexible(
+                              child: Container(
+                            width: 240,
+                            padding: EdgeInsets.only(
+                                left: 10, top: 30, bottom: 20, right: 10),
+                            child: Text(
+                                'Tối 2/6 thêm 138 ca mắc Covid-19, TPHCM liên tiếp ghi nhận trường hợp mới',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          )),
                           Container(
                             padding: const EdgeInsets.only(left: 10),
                             child: Text(
