@@ -15,10 +15,9 @@ class ChooseCityScreen extends StatefulWidget {
 }
 
 class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProviderStateMixin{
-  String _dropDownValue = "Chọn thành phố";
+  String _dropDownValue = "Thành phố";
   List<String> _dropDownList = [];
   List<CityCordinate> _listCity = [];
-  AnimationController animationController;
 
   double flagTopPos, flagLeftPos;
   int curCity;
@@ -36,23 +35,23 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
     setState(() {
       for (int i=0; i<_listCity.length; i++)
         _dropDownList.add(_listCity[i].city);
+
+      curCity = 0;
+      _dropDownValue = _dropDownList[0];
+      flagTopPos = _listCity[0].top.toDouble();
+      flagLeftPos = _listCity[0].left.toDouble();
     });
   }
 
   @override
   void initState() {
     super.initState();
-    animationController = AnimationController(
-      duration: Duration(milliseconds: 500),
-      vsync: this,
-    );
     readJson();
   }
 
   @override
   void dispose() {
     super.dispose();
-    animationController.dispose();
   }
 
   @override
@@ -67,24 +66,22 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
           children: <Widget>[
             _dropdownButton(),
 
-            SizeTransition(
-              child: Stack(
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(top: 40, bottom: 40),
-                    child:
-                        Image.asset('assets/images/map.png', width: 221, height: 465),
-                  ),
+            Stack(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(top: 40, bottom: 40),
+                  child:
+                      Image.asset('assets/images/map.png', width: 221, height: 465),
+                ),
 
-                  Positioned(
-                      top: flagTopPos,
-                      left: flagLeftPos,
-                      child: Image.asset('assets/images/flag.png', width: 30, height: 30,)
-                  )
-                ]
-              ),
-              sizeFactor: CurvedAnimation(parent: animationController, curve: Curves.easeOut),
+                Positioned(
+                    top: flagTopPos,
+                    left: flagLeftPos,
+                    child: Image.asset('assets/images/flag.png', width: 30, height: 30,)
+                )
+              ]
             ),
+
             _nextButton()
           ],
         ),
@@ -124,8 +121,6 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
                 }
               }
             });
-
-            animationController.forward();
           },
         ),
       ),
