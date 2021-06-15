@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import '../../logic/models/FoodInfo.dart';
+import 'package:vn_notitia/view/utils/navigation_bar.dart';
 import 'dart:convert';
 
 class FoodScreen extends StatefulWidget {
+  final String city;
+  final int cityIndex;
+
+  const FoodScreen({Key key, @required this.city, @required this.cityIndex }) : super(key: key);
+
   @override
   _FoodScreen createState() => _FoodScreen();
 }
@@ -40,6 +46,7 @@ class _FoodScreen extends State<FoodScreen> {
     return new Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
+      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.transparent,

@@ -4,8 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vn_notitia/logic/models/HistoryVid.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:vn_notitia/view/utils/navigation_bar.dart';
 
 class HistoryScreen extends StatefulWidget {
+  final String city;
+  final int cityIndex;
+
+  const HistoryScreen({Key key, @required this.city, @required this.cityIndex }) : super(key: key);
+
   @override
   _HistoryScreen createState() => _HistoryScreen();
 }
@@ -38,6 +44,7 @@ class _HistoryScreen extends State<HistoryScreen> {
       appBar: AppBar(
         title: Text(_city),
       ),
+      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: Column(
         children: [
           Flexible(

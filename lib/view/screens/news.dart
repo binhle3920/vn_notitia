@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import '../utils/navigation_bar.dart';
 
 class NewsScreen extends StatefulWidget {
+  final String city;
+  final int cityIndex;
+
+  const NewsScreen({Key key, @required this.city, @required this.cityIndex }) : super(key: key);
   @override
   _NewsScreen createState() => _NewsScreen();
 }
@@ -13,7 +17,7 @@ class _NewsScreen extends State<NewsScreen> {
       appBar: AppBar(
         title: Text("News"),
       ),
-      bottomNavigationBar: BottomNavigation(),
+      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: Container(
         child: Column(
           children: [
