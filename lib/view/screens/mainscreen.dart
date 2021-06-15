@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:vn_notitia/view/screens/city.dart';
 import 'package:vn_notitia/view/screens/covid.dart';
 import 'package:vn_notitia/view/screens/cuisine.dart';
 import 'package:vn_notitia/view/screens/news.dart';
@@ -9,9 +10,10 @@ import 'package:vn_notitia/view/screens/history.dart';
 import '../utils/navigation_bar.dart';
 
 class MainScreen extends StatefulWidget {
-  final city;
+  final String city;
+  final int cityIndex;
 
-  const MainScreen({Key key, @required this.city}) : super(key:key);
+  const MainScreen({Key key, @required this.city, @required this.cityIndex}) : super(key:key);
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -22,9 +24,16 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(
-        title: Text('Main screen'),
+        title: Text(widget.city),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          color: Colors.white,
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => ChooseCityScreen()));
+          },
+        ),
       ),
-      bottomNavigationBar: BottomNavigation(),
+      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: ListView(
         children: <Widget>[
           Container(

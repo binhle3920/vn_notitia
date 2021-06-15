@@ -5,6 +5,10 @@ import 'package:url_launcher/url_launcher.dart';
 import '../utils/navigation_bar.dart';
 
 class CovidScreen extends StatefulWidget {
+  final String city;
+  final int cityIndex;
+
+  const CovidScreen({Key key, @required this.city, @required this.cityIndex }) : super(key: key);
   @override
   _CovidScreenState createState() => _CovidScreenState();
 }
@@ -15,7 +19,7 @@ class _CovidScreenState extends State<CovidScreen> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(title: Text("Covid")),
-      bottomNavigationBar: BottomNavigation(),
+      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: ListView(
         children: <Widget>[
           Row(

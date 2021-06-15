@@ -142,8 +142,9 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
           }
           
           Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => MainScreen(city: curCity)));
+              .pushReplacement(MaterialPageRoute(builder: (context) => MainScreen(city: _dropDownValue, cityIndex: curCity)));
         },
+
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
         fillColor: Color.fromRGBO(78, 205, 196, 1),
         hoverColor: Color.fromRGBO(247, 255, 247, 1),

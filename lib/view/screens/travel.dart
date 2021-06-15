@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import '../utils/navigation_bar.dart';
 
 class TravelScreen extends StatefulWidget {
+  final String city;
+  final int cityIndex;
+
+  const TravelScreen({Key key, @required this.city, @required this.cityIndex }) : super(key: key);
+
   @override
   _TravelScreen createState() => _TravelScreen();
 }
@@ -13,7 +18,7 @@ class _TravelScreen extends State<TravelScreen> {
       appBar: AppBar(
         title: Text("Travel"),
       ),
-      bottomNavigationBar: BottomNavigation(),
+      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: Container(
         child: Column(
           children: [
