@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:vn_notitia/logic/models/Information.dart';
 import 'package:vn_notitia/view/screens/city.dart';
 import 'package:vn_notitia/view/screens/covid.dart';
 import 'package:vn_notitia/view/screens/cuisine.dart';
@@ -8,6 +9,7 @@ import 'package:vn_notitia/view/screens/news.dart';
 import 'package:vn_notitia/view/screens/travel.dart';
 import 'package:vn_notitia/view/screens/history.dart';
 import '../utils/navigation_bar.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class MainScreen extends StatefulWidget {
   final String city;
@@ -20,11 +22,23 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   @override
+  Information infor;
+  void initState() {
+    super.initState();
+    FirebaseDatabase.instance.reference().child('0').once().then((
+        DataSnapshot snapshot)     {
+      infor = Information.fromDb(snapshot);
+    });
+  }
+
+
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(
-        title: Text(widget.city),
+        title: Text(infor.city),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -39,7 +53,7 @@ class _MainScreenState extends State<MainScreen> {
         children: <Widget>[
           Container(
             padding: EdgeInsets.all(5),
-            child:  ClipRRect(borderRadius: new BorderRadius.circular(25.0),child: Image.network('https://i.imgur.com/0ofPEaQ.jpg',
+            child:  ClipRRect(borderRadius: new BorderRadius.circular(25.0),child: Image.network(infor.img,
               fit: BoxFit.cover,),),
 
 
@@ -164,7 +178,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: Center(
               child: Text(
-                " \nRủ nhau mua tép Nam Ô\n Sẵn bờ cát trắng, phơi khô đem về\n",
+                " \n" + infor.sentence1 + "\n" + infor.sentence2 + "\n",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18.0),
               ),
@@ -187,7 +201,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: Center(
               child: Text(
-                " \n496.3 km2\n",
+                " \n" + infor.square + "\n",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18.0, color: Colors.red),
               ),
@@ -210,7 +224,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: Center(
               child: Text(
-                " \n1.137.310 người\n",
+                " \n" + infor.population + " người\n",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18.0, color: Colors.red),
               ),
@@ -233,7 +247,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: Center(
               child: Text(
-                " \n43\n",
+                " \n "+ infor.lp +"\n",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18.0, color: Colors.red),
               ),

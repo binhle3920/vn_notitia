@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 
 import 'package:vn_notitia/view/screens/city.dart';
+import 'package:vn_notitia/view/screens/mainscreen.dart';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key key}) : super(key: key);
@@ -27,7 +28,7 @@ class _LoadingScreenState extends State<LoadingScreen>
 
     Timer(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => ChooseCityScreen()));
+          MaterialPageRoute(builder: (context) => MainScreen()));
     });
 
     super.initState();
