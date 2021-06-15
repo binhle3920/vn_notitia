@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -21,24 +23,23 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  @override
   Information infor;
+
+  @override
   void initState() {
-    super.initState();
-    FirebaseDatabase.instance.reference().child('0').once().then((
-        DataSnapshot snapshot)     {
-      infor = Information.fromDb(snapshot);
+    FirebaseDatabase.instance.reference().child('0').once().then((DataSnapshot snapshot) {
+        infor = Information.fromDb(snapshot);
     });
+
+    super.initState();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(
-        title: Text(infor.city),
+        title: Text(infor.cityName),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),

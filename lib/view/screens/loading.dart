@@ -28,7 +28,7 @@ class _LoadingScreenState extends State<LoadingScreen>
 
     Timer(Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => MainScreen()));
+          MaterialPageRoute(builder: (context) => ChooseCityScreen()));
     });
 
     super.initState();

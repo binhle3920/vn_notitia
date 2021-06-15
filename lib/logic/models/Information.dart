@@ -1,6 +1,8 @@
+import 'dart:developer';
+
 import 'package:firebase_database/firebase_database.dart';
 class Information {
-  String city;
+  String cityName;
   String square;
   String population;
   String sentence1;
@@ -8,18 +10,17 @@ class Information {
   String lp;
   String img;
 
-  // Information(this.city, this.square, this.population,this.sentence1, this.sentence2, this.lp, this.img);
+  Information(this.cityName, this.square, this.population,this.sentence1, this.sentence2, this.lp, this.img);
 
-  Information.fromDb(DataSnapshot data)
+  factory Information.fromDb(DataSnapshot data)
   {
     var da = data.value;
-    Information c;
-    c.city = da['PROVINCE'];
-    c.square = da['AREA'];
-    c.population = da['POPULATION'];
-    c.sentence1 = da['CDTN1'];
-    c.sentence2 = da['CDTN2'];
-    c.lp = da['LP'];
-    c.img = da['IMG'];
+
+    return Information(da['PROVINCE'], da['AREA'], da['POPULATION'], da['CDTN1'], da['CDTN2'], da['LP'], da['IMG']);
+  }
+
+  @override
+  String toString() {
+    return '{ ${this.cityName}, ${this.square}, ${this.sentence1}, ${this.sentence2}, ${this.lp}, ${this.img}  }';
   }
 }
