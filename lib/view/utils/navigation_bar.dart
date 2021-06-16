@@ -12,31 +12,18 @@ class BottomNavigation extends StatelessWidget {
   final int cityIndex;
   static int currentTabIndex = 2;
 
-  const BottomNavigation({Key key, @required this.city, @required this.cityIndex}) : super(key: key);
+  const BottomNavigation(
+      {Key key, @required this.city, @required this.cityIndex})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ConvexAppBar(
       items: [
-        TabItem(
-            icon: Icons.my_library_books,
-            title: "News"
-        ),
-        TabItem(
-            icon: Icons.history,
-            title: "History"
-        ),
-        TabItem(
-          icon: Icons.home,
-          title: "Home"
-        ),
-        TabItem(
-            icon: Icons.wallet_travel,
-            title: "Travel"
-        ),
-        TabItem(
-            icon: Icons.fastfood,
-            title: "Food"
-        )
+        TabItem(icon: Icons.my_library_books, title: "News"),
+        TabItem(icon: Icons.history, title: "History"),
+        TabItem(icon: Icons.home, title: "Home"),
+        TabItem(icon: Icons.wallet_travel, title: "Travel"),
+        TabItem(icon: Icons.fastfood, title: "Food")
       ],
       initialActiveIndex: currentTabIndex,
       color: Colors.white,
@@ -46,32 +33,39 @@ class BottomNavigation extends StatelessWidget {
           return;
         }
 
-        switch(i) {
+        switch (i) {
           case 0:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => (NewsScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) =>
+                    (NewsScreen(city: city, cityIndex: cityIndex))));
             currentTabIndex = i;
             break;
           case 1:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => (HistoryScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) =>
+                    (HistoryScreen(city: city, cityIndex: cityIndex))));
             currentTabIndex = i;
             break;
           case 2:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => (MainScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) =>
+                    (MainScreen(city: city, cityIndex: cityIndex))));
             currentTabIndex = i;
             break;
           case 3:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => (TravelScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) =>
+                    (TravelScreen(city: city, cityIndex: cityIndex))));
             currentTabIndex = i;
             break;
           case 4:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => (FoodScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) =>
+                    (FoodScreen(city: city, cityIndex: cityIndex))));
             currentTabIndex = i;
             break;
-
         }
-
       },
     );
   }
 }
-

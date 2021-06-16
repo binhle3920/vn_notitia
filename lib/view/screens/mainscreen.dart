@@ -17,7 +17,8 @@ class MainScreen extends StatefulWidget {
   final String city;
   final int cityIndex;
 
-  const MainScreen({Key key, @required this.city, @required this.cityIndex}) : super(key:key);
+  const MainScreen({Key key, @required this.city, @required this.cityIndex})
+      : super(key: key);
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -27,8 +28,12 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void initState() {
-    FirebaseDatabase.instance.reference().child('0').once().then((DataSnapshot snapshot) {
-        infor = Information.fromDb(snapshot);
+    FirebaseDatabase.instance
+        .reference()
+        .child('0')
+        .once()
+        .then((DataSnapshot snapshot) {
+      infor = Information.fromDb(snapshot);
     });
 
     super.initState();
@@ -45,19 +50,24 @@ class _MainScreenState extends State<MainScreen> {
           icon: Icon(Icons.arrow_back),
           color: Colors.white,
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => ChooseCityScreen()));
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => ChooseCityScreen()));
           },
         ),
       ),
-      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
+      bottomNavigationBar:
+          BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: ListView(
         children: <Widget>[
           Container(
             padding: EdgeInsets.all(5),
-            child:  ClipRRect(borderRadius: new BorderRadius.circular(25.0),child: Image.network(infor.img,
-              fit: BoxFit.cover,),),
-
-
+            child: ClipRRect(
+              borderRadius: new BorderRadius.circular(25.0),
+              child: Image.network(
+                infor.img,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           Divider(
             thickness: 1,
@@ -73,7 +83,9 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => CovidScreen(city: widget.city, cityIndex: widget.cityIndex)),
+                    MaterialPageRoute(
+                        builder: (context) => CovidScreen(
+                            city: widget.city, cityIndex: widget.cityIndex)),
                   );
                 },
                 icon: Image.asset('assets/images/covid.png'),
@@ -91,7 +103,9 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => NewsScreen(city: widget.city, cityIndex: widget.cityIndex)),
+                    MaterialPageRoute(
+                        builder: (context) => NewsScreen(
+                            city: widget.city, cityIndex: widget.cityIndex)),
                   );
                 },
                 icon: Image.asset('assets/images/news.png'),
@@ -109,7 +123,9 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HistoryScreen(city: widget.city, cityIndex: widget.cityIndex)),
+                    MaterialPageRoute(
+                        builder: (context) => HistoryScreen(
+                            city: widget.city, cityIndex: widget.cityIndex)),
                   );
                 },
                 icon: Image.asset("assets/images/history.png"),
@@ -132,7 +148,9 @@ class _MainScreenState extends State<MainScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TravelScreen(city: widget.city, cityIndex: widget.cityIndex)),
+                      MaterialPageRoute(
+                          builder: (context) => TravelScreen(
+                              city: widget.city, cityIndex: widget.cityIndex)),
                     );
                   },
                   icon: Image.asset('assets/images/place.png'),
@@ -149,7 +167,9 @@ class _MainScreenState extends State<MainScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => FoodScreen(city: widget.city, cityIndex: widget.cityIndex)),
+                    MaterialPageRoute(
+                        builder: (context) => FoodScreen(
+                            city: widget.city, cityIndex: widget.cityIndex)),
                   );
                 },
                 icon: Image.asset('assets/images/food.png'),
@@ -248,7 +268,7 @@ class _MainScreenState extends State<MainScreen> {
           Container(
             child: Center(
               child: Text(
-                " \n "+ infor.lp +"\n",
+                " \n " + infor.lp + "\n",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18.0, color: Colors.red),
               ),
