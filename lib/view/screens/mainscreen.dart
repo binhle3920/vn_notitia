@@ -12,6 +12,7 @@ import 'package:vn_notitia/view/screens/travel.dart';
 import 'package:vn_notitia/view/screens/history.dart';
 import '../utils/navigation_bar.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:vn_notitia/view/utils/navigation_bar.dart';
 
 class MainScreen extends StatefulWidget{
   final String city;
@@ -75,7 +76,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(
-        title: Text(infor.cityName),
+        title: Text(widget.city),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -86,8 +87,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
           },
         ),
       ),
-      bottomNavigationBar:
-      BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
+      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: ListView(
         children: <Widget>[
           Container(
@@ -112,7 +112,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               IconButton(
                 padding: EdgeInsets.all(25),
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                         builder: (context) => CovidScreen(
@@ -132,7 +132,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               IconButton(
                 padding: EdgeInsets.all(10),
                 onPressed: () {
-                  Navigator.push(
+                  BottomNavigation.currentTabIndex = 0;
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                         builder: (context) => NewsScreen(
@@ -152,7 +153,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               IconButton(
                 padding: EdgeInsets.all(10),
                 onPressed: () {
-                  Navigator.push(
+                  BottomNavigation.currentTabIndex = 1;
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                         builder: (context) => HistoryScreen(
@@ -177,7 +179,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               IconButton(
                   padding: EdgeInsets.all(25),
                   onPressed: () {
-                    Navigator.push(
+                    BottomNavigation.currentTabIndex = 3;
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => TravelScreen(
@@ -196,7 +199,8 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               IconButton(
                 // padding: EdgeInsets.all(10) ,
                 onPressed: () {
-                  Navigator.push(
+                  BottomNavigation.currentTabIndex = 4;
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                         builder: (context) => FoodScreen(
