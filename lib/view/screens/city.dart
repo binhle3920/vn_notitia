@@ -15,7 +15,7 @@ class ChooseCityScreen extends StatefulWidget {
 }
 
 class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProviderStateMixin{
-  String _dropDownValue = "Thành phố";
+  static String _dropDownValue = "Thành phố";
   List<String> _dropDownList = [];
   List<CityCordinate> _listCity = [];
 
@@ -56,8 +56,6 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
 
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       body: Center(

@@ -18,6 +18,7 @@ class BottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConvexAppBar(
+
       items: [
         TabItem(icon: Icons.my_library_books, title: "News"),
         TabItem(icon: Icons.history, title: "History"),

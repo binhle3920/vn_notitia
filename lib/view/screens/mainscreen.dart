@@ -31,6 +31,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
   @override
   void initState() {
     super.initState();
+
     animationController = AnimationController(
       duration: Duration(seconds: 3),
       vsync: this,
@@ -39,6 +40,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
 
   @override
   Widget build(BuildContext context) {
+    BottomNavigation.currentTabIndex = 2;
     return FutureBuilder<String> (
       future: loadData(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -112,7 +114,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               IconButton(
                 padding: EdgeInsets.all(25),
                 onPressed: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => CovidScreen(
