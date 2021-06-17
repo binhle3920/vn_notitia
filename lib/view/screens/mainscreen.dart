@@ -13,7 +13,7 @@ import 'package:vn_notitia/view/screens/history.dart';
 import '../utils/navigation_bar.dart';
 import 'package:firebase_database/firebase_database.dart';
 
-class MainScreen extends StatefulWidget {
+class MainScreen extends StatefulWidget{
   final String city;
   final int cityIndex;
 
@@ -23,24 +23,55 @@ class MainScreen extends StatefulWidget {
   _MainScreenState createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  {
   Information infor;
+  AnimationController animationController;
 
   @override
   void initState() {
-    FirebaseDatabase.instance
+    super.initState();
+    animationController = AnimationController(
+      duration: Duration(seconds: 3),
+      vsync: this,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<String> (
+      future: loadData(),
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if( snapshot.connectionState == ConnectionState.waiting){
+          animationController.forward();
+          return buildWaitingScreen();
+        } else {
+          if (snapshot.hasError)
+            return Center(child: Text('Error: ${snapshot.error}'));
+          else
+            return buildMainScreen();
+        }
+      }
+    );
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  Future<String> loadData() async {
+    await FirebaseDatabase.instance
         .reference()
         .child('0')
         .once()
         .then((DataSnapshot snapshot) {
       infor = Information.fromDb(snapshot);
     });
-
-    super.initState();
+    return Future.value("Data load successfully"); // return your response
   }
 
-  @override
-  Widget build(BuildContext context) {
+  Widget buildMainScreen() {
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(
@@ -56,7 +87,7 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
       bottomNavigationBar:
-          BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
+      BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: ListView(
         children: <Widget>[
           Container(
@@ -275,6 +306,18 @@ class _MainScreenState extends State<MainScreen> {
             ),
           )
         ],
+      ),
+    );
+  }
+  Widget buildWaitingScreen() {
+    return Scaffold(
+      backgroundColor: Color.fromRGBO(247, 255, 247, 1),
+      body: Center(
+        child: RotationTransition(
+          turns: Tween(begin: 0.0, end: 1.0).animate(animationController),
+          child: Image.asset('assets/images/load_rotate.png',
+              width: 80, height: 80),
+        ),
       ),
     );
   }
