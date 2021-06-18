@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -14,7 +12,7 @@ import '../utils/navigation_bar.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:vn_notitia/view/utils/navigation_bar.dart';
 
-class MainScreen extends StatefulWidget{
+class MainScreen extends StatefulWidget {
   final String city;
   final int cityIndex;
 
@@ -24,7 +22,7 @@ class MainScreen extends StatefulWidget{
   _MainScreenState createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  {
+class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
   Information infor;
   AnimationController animationController;
 
@@ -41,20 +39,19 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
   @override
   Widget build(BuildContext context) {
     BottomNavigation.currentTabIndex = 2;
-    return FutureBuilder<String> (
-      future: loadData(),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if( snapshot.connectionState == ConnectionState.waiting){
-          animationController.forward();
-          return buildWaitingScreen();
-        } else {
-          if (snapshot.hasError)
-            return Center(child: Text('Error: ${snapshot.error}'));
-          else
-            return buildMainScreen();
-        }
-      }
-    );
+    return FutureBuilder<String>(
+        future: loadData(),
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            animationController.forward();
+            return buildWaitingScreen();
+          } else {
+            if (snapshot.hasError)
+              return Center(child: Text('Error: ${snapshot.error}'));
+            else
+              return buildMainScreen();
+          }
+        });
   }
 
   @override
@@ -66,7 +63,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
   Future<String> loadData() async {
     await FirebaseDatabase.instance
         .reference()
-        .child('0')
+        .child('${widget.cityIndex}')
         .once()
         .then((DataSnapshot snapshot) {
       infor = Information.fromDb(snapshot);
@@ -78,18 +75,27 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),
       appBar: AppBar(
-        title: Text(widget.city),
         centerTitle: true,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          color: Colors.white,
-          onPressed: () {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => ChooseCityScreen()));
-          },
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 40),
+              child: Text(widget.city),
+            ),
+            IconButton(
+              icon: Icon(Icons.arrow_drop_down),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => ChooseCityScreen()));
+              },
+            ),
+          ],
         ),
       ),
-      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
+      bottomNavigationBar:
+          BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: ListView(
         children: <Widget>[
           Container(
@@ -112,7 +118,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
-                padding: EdgeInsets.all(25),
+                padding: EdgeInsets.all(20),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -132,7 +138,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               ),
               Spacer(),
               IconButton(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(20),
                 onPressed: () {
                   BottomNavigation.currentTabIndex = 0;
                   Navigator.pushReplacement(
@@ -153,7 +159,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               ),
               Spacer(),
               IconButton(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(20),
                 onPressed: () {
                   BottomNavigation.currentTabIndex = 1;
                   Navigator.pushReplacement(
@@ -179,7 +185,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               IconButton(
-                  padding: EdgeInsets.all(25),
+                  padding: EdgeInsets.all(20),
                   onPressed: () {
                     BottomNavigation.currentTabIndex = 3;
                     Navigator.pushReplacement(
@@ -199,7 +205,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               ),
               Spacer(),
               IconButton(
-                // padding: EdgeInsets.all(10) ,
+                padding: EdgeInsets.all(20),
                 onPressed: () {
                   BottomNavigation.currentTabIndex = 4;
                   Navigator.pushReplacement(
@@ -220,7 +226,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
               ),
               Spacer(),
               IconButton(
-                // padding: EdgeInsets.all(10) ,
+                padding: EdgeInsets.all(20),
                 onPressed: () {},
                 icon: Image.asset("assets/images/game.png"),
                 iconSize: 70,
@@ -315,6 +321,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin  
       ),
     );
   }
+
   Widget buildWaitingScreen() {
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 255, 247, 1),

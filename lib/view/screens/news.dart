@@ -1,5 +1,6 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
+import 'package:vn_notitia/view/screens/city.dart';
 import '../utils/navigation_bar.dart';
 import '../../logic/models/News.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -117,7 +118,23 @@ class _NewsScreen extends State<NewsScreen> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text(widget.city),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.only(left: 40),
+                child: Text(widget.city),
+              ),
+              IconButton(
+                icon: Icon(Icons.arrow_drop_down),
+                color: Colors.white,
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => ChooseCityScreen()));
+                },
+              ),
+            ],
+          ),
         ),
         bottomNavigationBar:
             BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),

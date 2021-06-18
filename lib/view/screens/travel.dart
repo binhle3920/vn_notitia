@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:vn_notitia/view/screens/city.dart';
 import '../utils/navigation_bar.dart';
 
 class TravelScreen extends StatefulWidget {
   final String city;
   final int cityIndex;
 
-  const TravelScreen({Key key, @required this.city, @required this.cityIndex }) : super(key: key);
+  const TravelScreen({Key key, @required this.city, @required this.cityIndex})
+      : super(key: key);
 
   @override
   _TravelScreen createState() => _TravelScreen();
@@ -16,10 +18,27 @@ class _TravelScreen extends State<TravelScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.city),
         centerTitle: true,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 40),
+              child: Text(widget.city),
+            ),
+            IconButton(
+              icon: Icon(Icons.arrow_drop_down),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => ChooseCityScreen()));
+              },
+            ),
+          ],
+        ),
       ),
-      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
+      bottomNavigationBar:
+          BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       body: Container(
         child: Column(
           children: [

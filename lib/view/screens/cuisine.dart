@@ -1,66 +1,95 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:vn_notitia/view/screens/city.dart';
 import '../../logic/models/FoodInfo.dart';
 import 'package:vn_notitia/view/utils/navigation_bar.dart';
-import 'dart:convert';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class FoodScreen extends StatefulWidget {
   final String city;
   final int cityIndex;
 
-  const FoodScreen({Key key, @required this.city, @required this.cityIndex }) : super(key: key);
+  const FoodScreen({Key key, @required this.city, @required this.cityIndex})
+      : super(key: key);
 
   @override
   _FoodScreen createState() => _FoodScreen();
 }
 
 class _FoodScreen extends State<FoodScreen> {
-  final String _city = 'Hà Nội';
   String _text;
-
-  List _temp = [];
   List<FoodInfo> _foods = [];
-  Future<void> readJson() async {
-    final String response =
-        await rootBundle.loadString('assets/data/food.json');
-    final data = await json.decode(response);
-    setState(() {
-      _temp = data["foods"];
-      for (int i = 0; i < _temp.length; i++)
-        _foods.add(FoodInfo.fromJson(_temp[i]));
-
-      _text = _foods[0].foodRef; // init first food
-    });
-  }
+  Future<String> _data;
 
   @override
   void initState() {
     super.initState();
-    readJson();
+    _data = loadData();
   }
 
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
+    return FutureBuilder<String>(
+        future: _data,
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          switch (snapshot.connectionState) {
+            case ConnectionState.waiting:
+              return Center(child: CircularProgressIndicator());
+            case ConnectionState.none:
+              return Center(child: Text('Can not connect'));
+            case ConnectionState.done:
+              return buildFoodScreen();
+            default:
+              return null;
+          }
+        });
+  }
+
+  Future<String> loadData() async {
+    await FirebaseDatabase.instance
+        .reference()
+        .child('${widget.cityIndex}/Food')
+        .once()
+        .then((DataSnapshot snapshot) {
+      if (snapshot.value == null) return;
+      Map<String, dynamic> result =
+          Map<String, dynamic>.from(snapshot.value as Map<dynamic, dynamic>);
+      result.forEach((key, values) {
+        _foods.add(FoodInfo.fromJson(values));
+      });
+      _text = _foods[0].foodRef; // init first food
+    });
+    return Future.value("Data load successfully");
+  }
+
+  Widget buildFoodScreen() {
     return new Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      bottomNavigationBar: BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
+      bottomNavigationBar:
+          BottomNavigation(city: widget.city, cityIndex: widget.cityIndex),
       appBar: AppBar(
         centerTitle: true,
-        title: Text(widget.city),
-        // backgroundColor: Colors.transparent,
-        // elevation: 0,
-        // iconTheme: IconThemeData(color: Colors.black),
-        // title: Text(
-        //   '$_city',
-        //   style: TextStyle(
-        //     fontSize: 28,
-        //     color: Colors.black,
-        //     decoration: TextDecoration.underline,
-        //   ),
-        // ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 40),
+              child: Text(widget.city),
+            ),
+            IconButton(
+              icon: Icon(Icons.arrow_drop_down),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => ChooseCityScreen()));
+              },
+            ),
+          ],
+        ),
       ),
       body: new Container(
           child: SafeArea(
@@ -82,12 +111,21 @@ class _FoodScreen extends State<FoodScreen> {
                 bottomRight: const Radius.circular(40.0),
               ),
             ),
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                '$_text',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 32),
+            child: Container(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 300.0,
+                  maxWidth: 300.0,
+                  minHeight: 150.0,
+                  maxHeight: 150.0,
+                ),
+                child: Center(
+                  child: AutoSizeText(
+                    '$_text',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                ),
               ),
             ),
           ),
@@ -116,7 +154,7 @@ class _FoodScreen extends State<FoodScreen> {
               //info
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 600,
+                height: 520,
                 decoration: new BoxDecoration(
                   borderRadius: new BorderRadius.only(
                     topLeft: const Radius.circular(40.0),
@@ -128,7 +166,7 @@ class _FoodScreen extends State<FoodScreen> {
                 child: new Swiper(
                   layout: SwiperLayout.CUSTOM,
                   customLayoutOption: new CustomLayoutOption(
-                          startIndex: -1, stateCount: _foods.length)
+                          startIndex: -1, stateCount: 3)
                       .addRotate([-45.0 / 180, 0.0, 45.0 / 180]).addTranslate([
                     new Offset(-370.0, -40.0),
                     new Offset(0.0, 0.0),
@@ -153,9 +191,13 @@ class _FoodScreen extends State<FoodScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Image.asset(
-                            'assets/images/' + _foods[index].foodImg,
-                            fit: BoxFit.fill,
+                          ClipOval(
+                            child: Image.network(
+                              _foods[index].foodImg,
+                              height: 300,
+                              width: 300,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                           Text(
                             _foods[index].foodPrice,

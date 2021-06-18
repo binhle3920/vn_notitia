@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +12,8 @@ class ChooseCityScreen extends StatefulWidget {
   _ChooseCityScreenState createState() => _ChooseCityScreenState();
 }
 
-class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProviderStateMixin{
+class _ChooseCityScreenState extends State<ChooseCityScreen>
+    with TickerProviderStateMixin {
   static String _dropDownValue = "Thành phố";
   List<String> _dropDownList = [];
   List<CityCordinate> _listCity = [];
@@ -23,7 +22,8 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
   int curCity;
 
   Future<void> readJson() async {
-    final String response = await DefaultAssetBundle.of(context).loadString('assets/data/city_cor.json');
+    final String response = await DefaultAssetBundle.of(context)
+        .loadString('assets/data/city_cor.json');
     final data = await json.decode(response);
 
     List _temp = data["cities"];
@@ -31,9 +31,8 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
       //save list city to CityCordinate object
       _listCity.add(CityCordinate.fromJson(_temp[i]));
 
-
     setState(() {
-      for (int i=0; i<_listCity.length; i++)
+      for (int i = 0; i < _listCity.length; i++)
         _dropDownList.add(_listCity[i].city);
 
       curCity = 0;
@@ -63,23 +62,21 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             _dropdownButton(),
-
-            Stack(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(top: 40, bottom: 40),
-                  child:
-                      Image.asset('assets/images/map.png', width: 221, height: 465),
-                ),
-
-                Positioned(
-                    top: flagTopPos,
-                    left: flagLeftPos,
-                    child: Image.asset('assets/images/flag.png', width: 30, height: 30,)
-                )
-              ]
-            ),
-
+            Stack(children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(top: 40, bottom: 40),
+                child: Image.asset('assets/images/map.png',
+                    width: 221, height: 465),
+              ),
+              Positioned(
+                  top: flagTopPos,
+                  left: flagLeftPos,
+                  child: Image.asset(
+                    'assets/images/flag.png',
+                    width: 30,
+                    height: 30,
+                  ))
+            ]),
             _nextButton()
           ],
         ),
@@ -95,14 +92,13 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
           iconSize: 50,
           iconEnabledColor: Color.fromRGBO(78, 205, 196, 1),
           isExpanded: false,
-          hint: Text(_dropDownValue,
-            style: GoogleFonts.getFont(
-              'Roboto',
-              textStyle: TextStyle(
-                fontSize: 40,
-                color: Color.fromRGBO(78, 205, 196, 1),
-              )
-            ),
+          hint: Text(
+            _dropDownValue,
+            style: GoogleFonts.getFont('Roboto',
+                textStyle: TextStyle(
+                  fontSize: 40,
+                  color: Color.fromRGBO(78, 205, 196, 1),
+                )),
           ),
           items: _dropDownList.map((val) {
             return DropdownMenuItem(child: Text(val), value: val);
@@ -110,7 +106,7 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
           onChanged: (val) {
             setState(() {
               _dropDownValue = val;
-              for (int i=0; i<_listCity.length; i++) {
+              for (int i = 0; i < _listCity.length; i++) {
                 if (_listCity[i].city == val) {
                   flagTopPos = _listCity[i].top.toDouble();
                   flagLeftPos = _listCity[i].left.toDouble();
@@ -138,11 +134,11 @@ class _ChooseCityScreenState extends State<ChooseCityScreen> with TickerProvider
           if (curCity == null) {
             return;
           }
-          
-          Navigator.of(context)
-              .pushReplacement(MaterialPageRoute(builder: (context) => MainScreen(city: _dropDownValue, cityIndex: curCity)));
-        },
 
+          Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) =>
+                  MainScreen(city: _dropDownValue, cityIndex: curCity)));
+        },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
         fillColor: Color.fromRGBO(78, 205, 196, 1),
         hoverColor: Color.fromRGBO(247, 255, 247, 1),

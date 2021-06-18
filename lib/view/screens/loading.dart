@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 
 import 'package:vn_notitia/view/screens/city.dart';
-import 'package:vn_notitia/view/screens/mainscreen.dart';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key key}) : super(key: key);

@@ -25,7 +25,7 @@ dependencies:
   convex_bottom_bar: ^3.0.0
   google_fonts: ^2.1.0
   youtube_player_flutter: ^8.0.0 
-  # auto_size_text: ^2.1.0
+  auto_size_text: ^2.1.0
   # animated_text_kit: ^4.2.1
   flutter:
     sdk: flutter
