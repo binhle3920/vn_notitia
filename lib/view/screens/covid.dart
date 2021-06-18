@@ -123,15 +123,6 @@ class _CovidScreenState extends State<CovidScreen> with TickerProviderStateMixin
                 ),
               ),
 
-              Container(
-                  alignment: Alignment.topRight,
-                  padding: EdgeInsets.only(right: 10, top: 10),
-                  child: Text(
-                    '3/6/2021',
-                    style:
-                    TextStyle(color: Color(0xffFF6B6B), fontSize: 22.0),
-                  )),
-
               Column(
                 children: [
                   Row(
