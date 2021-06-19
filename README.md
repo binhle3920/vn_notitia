@@ -5,7 +5,6 @@ VN Notitia this is a non-commercial project created for the purpose of participa
 event, that promotes Vietnam's culture and history.  
 
 ## Screens and function
-
 ### Loading Screen
 ![Loading screen image](https://lh3.googleusercontent.com/z_7wn0QMMd_rxxz1zqtl2R4ztnmDKvizmpBmlePwzcXxOHc9hAOrUUS-_-0LqWqdXBrZTQjOCGCX4_7KeECTXkq1wSaKQ-5I-zmom0KVIeZlfERhr5nxNA984VzPfXVYbXs0o2iylqIurflfM2L-RaJADIkeDDfTq8T0uFq1wOpCYoKzateeYeOW73ENOiw2Pqjr4zzCwCsT5RbO6IPEzVSVWHZ_8bPwcAlLtu8k-P19FsACtMOPNege9fPc_DHHWtijxq8-W8jLW5wlF805peyvjee0RLDsiOvrzIYeqz_IRNtqMI4Huxdi2eGmiH8R1eJzR1G8bF-PhgTxjvv5a3pYAfvc3O87-5pNn0DoISyOwWBsWPHk2vzDMsAf7PBAkf224OtTe-DQsfE6268e6RmyRR-k1CtPtbEuvTHVA4LarF9Dt0cOOMHYLzGgjKUX-u1ACbKkLGn4_4UhPTG4g9rCbk4EacW6XrR_l2qvUjRQnsrZpSep6a9BuJ_Uw_lh7G3BCzY9hn5_mpn9WqneyoJkcihXGAgHjd4jP24nc8pSpmFdh0F6Fd-NBi8mEtsW0JmWeNMABLG7go9UgKz9xYfgmq_pRDebQiqKGDXKXPKQDBKXa8qo86wRqDbVPfQhqoSQRq0ocO_zvpJGbFKPiNZR0_Ao4bL8hx1RfpKZ4jVnvmvtA5XOZRzkxw1kDMg6xIl9-S5gwXgGEq90GGCPi0gX=w464-h977-no?authuser=0)
 ### Choose city Screen
@@ -42,7 +41,8 @@ that city:
 
 ![Cuisine screen image](https://lh3.googleusercontent.com/D9p6Az_xw5sMXbeopIVwd3nmSxqe6mkCtcWf5UvicUVv0Ktp8dXeSRzUVutmOW8KTzfvNtmfbZ9LilSmPGwc3UbB9tMYmebVDwSumx_GOxXp2iy2vURjnQU361WdGraSLOv2yiZyrP5aphmoak7ieYpjodwoHdNOScsVSUOLxr19xAo0d_V4Cb-KSS2Fj7UK_evaZ-hMwFz9BlpiTTctnwW4rVw_BfIvjBr7uTOdUT4WTZnVP5J1UXj3VcZD7jVWRjCRBL1ipRVws99VEtOVV3XoisXTEtzyH2mwg94AG7TGxCRVzHVgOqOfnw8pZhmpz8C8JKRKqsTJY1b3pars2TmB3L2Xv-A7yWSI0VG4nnifyrx4ahFZikhlJDcahUMG2xBitNDZ3LBwNOgRZAlN9UBHLtDZC2hqzyw4mHMmOL4xVnIpkllTHbbbqHAgTRpq9FBNcX51Ps5_TGYpWHxXDascjbLk17ssb7CpySfhyyqLIoXwd8nNBaJAXCvfNoRk8lnet2WMN8ozBqn7k-zu9OZyAOoOAz1xU9tuowB7rNkTLGdVNW1IlOAy_T4aa5TTgdsU2WCTOXKLUOgWAv_GKaMJX_gd9VtrVyPsxfb6BzU_tq6CoOBKlHpEriXwp3YOKG04DHLNYS2jzwS2bRUhcKN4GjtF3s0rkhvTNk7kQJuLg2i9ypvJG6k9id3V2bkUjxhu0NhKsgx88M4IzxXzrMpf=w459-h968-no?authuser=0)
 
-## Technology
+## Other information
 - Information about Covid 19 is getting from ["OpenDevelopment Mekong"](https://data.opendevelopmentmekong.net//dataset/coronavirus-covid-19-cases-in-vietnam)
 - Using **Firebase** to save information about provinces.
+- Data is only available at: Hà Nội, TP.HCM, Bắc Kạn, Thừa Thiên Huế. The other province's data will be updated in the future. 
 

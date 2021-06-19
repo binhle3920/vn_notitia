@@ -17,7 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Slabo',
         primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Color.fromRGBO(26, 83, 92, 1)
+        )
       ),
+
       home: LoadingScreen(),
       debugShowCheckedModeBanner: false,
     );
