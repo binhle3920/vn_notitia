@@ -163,54 +163,57 @@ class _FoodScreen extends State<FoodScreen> {
                     bottomRight: const Radius.circular(40.0),
                   ),
                 ),
-                child: new Swiper(
-                  layout: SwiperLayout.CUSTOM,
-                  customLayoutOption: new CustomLayoutOption(
-                          startIndex: -1, stateCount: 3)
-                      .addRotate([-45.0 / 180, 0.0, 45.0 / 180]).addTranslate([
-                    new Offset(-370.0, -40.0),
-                    new Offset(0.0, 0.0),
-                    new Offset(370.0, -40.0)
-                  ]),
-                  onIndexChanged: (int index) {
-                    setState(() {
-                      _text = _foods[index].foodRef;
-                    });
-                  },
-                  itemCount: _foods.length,
-                  itemWidth: MediaQuery.of(context).size.width,
-                  itemBuilder: (context, index) {
-                    // _quote = foods[index].foodFact;
-                    return new Container(
-                      child: Column(
-                        children: <Widget>[
-                          Text(
-                            _foods[index].foodName,
-                            style: TextStyle(
-                              fontSize: 44,
-                              fontWeight: FontWeight.bold,
+                child: (_foods.length == 0)
+                    ? new Container()
+                    : new Swiper(
+                        layout: SwiperLayout.CUSTOM,
+                        customLayoutOption: new CustomLayoutOption(
+                                startIndex: -1, stateCount: 3)
+                            .addRotate(
+                                [-45.0 / 180, 0.0, 45.0 / 180]).addTranslate([
+                          new Offset(-370.0, -40.0),
+                          new Offset(0.0, 0.0),
+                          new Offset(370.0, -40.0)
+                        ]),
+                        onIndexChanged: (int index) {
+                          setState(() {
+                            _text = _foods[index].foodRef;
+                          });
+                        },
+                        itemCount: _foods.length,
+                        itemWidth: MediaQuery.of(context).size.width,
+                        itemBuilder: (context, index) {
+                          // _quote = foods[index].foodFact;
+                          return new Container(
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  _foods[index].foodName,
+                                  style: TextStyle(
+                                    fontSize: 44,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                ClipOval(
+                                  child: Image.network(
+                                    _foods[index].foodImg,
+                                    height: 300,
+                                    width: 300,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                Text(
+                                  _foods[index].foodPrice,
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                          ClipOval(
-                            child: Image.network(
-                              _foods[index].foodImg,
-                              height: 300,
-                              width: 300,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Text(
-                            _foods[index].foodPrice,
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
+                          );
+                        },
                       ),
-                    );
-                  },
-                ),
               ),
               // circle pattern
             ],
