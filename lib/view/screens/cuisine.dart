@@ -20,6 +20,7 @@ class FoodScreen extends StatefulWidget {
 
 class _FoodScreen extends State<FoodScreen> {
   String _text;
+  int _line = 0;
   List<FoodInfo> _foods = [];
   Future<String> _data;
 
@@ -61,6 +62,7 @@ class _FoodScreen extends State<FoodScreen> {
         _foods.add(FoodInfo.fromJson(values));
       });
       _text = _foods[0].foodRef; // init first food
+      _line = _foods[0].maxInfoLine;
     });
     return Future.value("Data load successfully");
   }
@@ -124,6 +126,7 @@ class _FoodScreen extends State<FoodScreen> {
                     '$_text',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0),
+                    maxLines: (_line == 0) ? null : _line,
                   ),
                 ),
               ),
@@ -178,6 +181,7 @@ class _FoodScreen extends State<FoodScreen> {
                         onIndexChanged: (int index) {
                           setState(() {
                             _text = _foods[index].foodRef;
+                            _line = _foods[index].maxInfoLine;
                           });
                         },
                         itemCount: _foods.length,
