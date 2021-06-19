@@ -36,33 +36,28 @@ class BottomNavigation extends StatelessWidget {
 
         switch (i) {
           case 0:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) =>
-                    (NewsScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) =>
+                    NewsScreen(city: city, cityIndex: cityIndex)), (Route<dynamic> route) => false);
             currentTabIndex = i;
             break;
           case 1:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) =>
-                    (HistoryScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) =>
+                HistoryScreen(city: city, cityIndex: cityIndex)), (Route<dynamic> route) => false);
             currentTabIndex = i;
             break;
           case 2:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) =>
-                    (MainScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) =>
+                MainScreen(city: city, cityIndex: cityIndex)), (Route<dynamic> route) => false);
             currentTabIndex = i;
             break;
           case 3:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) =>
-                    (TravelScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) =>
+                TravelScreen(city: city, cityIndex: cityIndex)), (Route<dynamic> route) => false);
             currentTabIndex = i;
             break;
           case 4:
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) =>
-                    (FoodScreen(city: city, cityIndex: cityIndex))));
+            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) =>
+                FoodScreen(city: city, cityIndex: cityIndex)), (Route<dynamic> route) => false);
             currentTabIndex = i;
             break;
         }
